@@ -38,6 +38,10 @@ namespace BW {
         public static void PreTick(GameContext ctx, float dt) { }
 
         public static void LogicTick(GameContext ctx, float dt) {
+            var input = ctx.inputCore;
+
+            RoleEntity role = ctx.Get_Role();
+            RoleDomain.Move(role, input.moveAxis);
         }
 
         public static void LastTick(GameContext ctx, float dt) { }

@@ -7,14 +7,19 @@ namespace BW {
 
         public int idSig;
         public int typeID;
-        public float mvoeSpeed;
+        public float moveSpeed;
 
         public void Ctor() {
-
+            moveSpeed = 5;
         }
+
         public void Move(Vector2 dir) {
-            // TODO: Add speed
-            rb.velocity = dir;
+            Debug.Log(dir);
+            var velo = rb.velocity;
+            float veloy = velo.y;
+            velo.x = dir.x * moveSpeed;
+            velo.y = veloy;
+            rb.velocity = velo;
         }
     }
 }

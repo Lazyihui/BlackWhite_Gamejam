@@ -5,6 +5,7 @@ namespace BW {
 
     public class InputCore {
         public InputController_Player input_Role;
+        public Vector2 moveAxis;
 
         public InputCore() {
             input_Role = new InputController_Player();
@@ -22,6 +23,12 @@ namespace BW {
             {
                 float kbxLeft = World.MoveLeft.ReadValue<float>();
                 float kbxRight = World.MoveRight.ReadValue<float>();
+
+                float kbxUp = World.MoveUp.ReadValue<float>();
+                float kbxDown = World.MoveDown.ReadValue<float>();
+
+                Vector2 axis = new Vector2(kbxRight - kbxLeft, kbxUp - kbxDown);
+                moveAxis = axis;
             }
 
         }

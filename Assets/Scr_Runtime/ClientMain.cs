@@ -54,6 +54,8 @@ namespace BW {
             // Input
             ctx.inputCore.Process();
 
+            Game_Business.Tick(ctx, dt);
+
         }
 
 

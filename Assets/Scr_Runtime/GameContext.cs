@@ -23,6 +23,11 @@ namespace BW {
         public void InJect() {
 
         }
+
+        public RoleEntity Get_Role() {
+            roleRepository.TryGet(gameEntity.ownerID, out RoleEntity role);
+            return role;
+        }
     }
 
 }
