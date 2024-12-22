@@ -32,6 +32,7 @@ namespace BW {
                 isInit = true;
 
                 // GameEnter;
+                Game_Business.Enter(ctx);
             };
 
             action.Invoke();
