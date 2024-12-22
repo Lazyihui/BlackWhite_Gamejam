@@ -6,6 +6,7 @@ namespace BW {
         public GameEntity gameEntity;
         // Core
         public AssetsCore assetsCore;
+        public InputCore inputCore;
         // ropository
         public RoleRepository roleRepository;
         public GameContext() {
@@ -13,6 +14,7 @@ namespace BW {
 
             // Core
             assetsCore = new AssetsCore();
+            inputCore = new InputCore();
 
             // repositories
             roleRepository = new RoleRepository();

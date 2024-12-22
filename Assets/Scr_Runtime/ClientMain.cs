@@ -49,6 +49,11 @@ namespace BW {
                 return;
             }
 
+            float dt = Time.deltaTime;
+
+            // Input
+            ctx.inputCore.Process();
+
         }
 
 
