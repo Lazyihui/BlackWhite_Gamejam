@@ -41,7 +41,9 @@ namespace BW {
             var input = ctx.inputCore;
 
             RoleEntity role = ctx.Get_Role();
+            // TODO: 是传入Vector2还是传入Ctx
             RoleDomain.Move(role, input.moveAxis);
+            RoleDomain.Jump(ctx, role);
         }
 
         public static void LastTick(GameContext ctx, float dt) { }

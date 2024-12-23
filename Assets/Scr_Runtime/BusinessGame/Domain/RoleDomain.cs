@@ -14,5 +14,12 @@ namespace BW {
         public static void Move(RoleEntity role, Vector2 dir) {
             role.Move(dir);
         }
+        public static void Jump(GameContext ctx,RoleEntity role){
+            var input = ctx.inputCore;
+            if(!input.isJump){
+                return;
+            }
+            role.Jump();
+        }
     }
 }

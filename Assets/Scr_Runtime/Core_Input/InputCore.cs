@@ -7,9 +7,12 @@ namespace BW {
         public InputController_Player input_Role;
         public Vector2 moveAxis;
 
+        public bool isJump;
+
         public InputCore() {
             input_Role = new InputController_Player();
             input_Role.Enable();
+            isJump = false;
         }
 
         public void Dispose() {
@@ -30,6 +33,15 @@ namespace BW {
                 Vector2 axis = new Vector2(kbxRight - kbxLeft, kbxUp - kbxDown);
                 moveAxis = axis;
             }
+
+            // jump
+            {
+                float kbxJ = World.Jump.ReadValue<float>();
+                if (kbxJ > 0) {
+                    isJump = true;
+                }
+            }
+
 
         }
     }

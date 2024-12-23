@@ -23,8 +23,6 @@ namespace BW {
             // Binding
             Binding();
 
-
-
             Action action = async () => {
 
                 await ctx.assetsCore.LoadAll();
