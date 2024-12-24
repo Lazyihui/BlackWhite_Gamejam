@@ -63,6 +63,7 @@ namespace BW {
             RoleDomain.GroundCheck(ctx, role);
 
             RoleDomain.TouchFlag(ctx, role);
+            RoleDomain.Shuttleboundary(ctx, role);
         }
 
         public static void LastTick(GameContext ctx, float dt) { }

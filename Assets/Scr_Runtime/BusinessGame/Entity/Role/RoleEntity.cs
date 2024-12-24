@@ -30,6 +30,10 @@ namespace BW {
             return rb.velocity;
         }
 
+        public void SetPos(Vector2 pos) {
+            transform.position = pos;
+        }
+
         //TODO:觉得要用全局的变量来同时控制map和role的状态
         public void Toggle() {
             Debug.Log("Toggle");

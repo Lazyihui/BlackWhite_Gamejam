@@ -22,6 +22,7 @@ namespace BW {
             role.Jump();
         }
 
+
         public static void GroundCheck(GameContext ctx, RoleEntity role) {
 
             // Physics2D.BoxCastAll();//向下发射一个射线，检测是否在地面上
@@ -93,6 +94,17 @@ namespace BW {
                 Debug.Log("isKeyDownE");
                 role.Toggle();
             }
+        }
+
+        // 简单粗暴的穿梭
+        public static void Shuttleboundary(GameContext ctx, RoleEntity role) {
+            Vector2 pos = role.GetPos();
+            if (pos.x > 11f) {
+                pos.x = -11f;
+            } else if (pos.x < -11f) {
+                pos.x = 11f;
+            }
+            role.SetPos(pos);
         }
     }
 }
