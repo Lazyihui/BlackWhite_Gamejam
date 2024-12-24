@@ -47,6 +47,8 @@ namespace BW {
             RoleDomain.Move(role, input.moveAxis);
             RoleDomain.Jump(ctx, role);
             RoleDomain.GroundCheck(ctx, role);
+
+            RoleDomain.TouchFlag(ctx, role);    
         }
 
         public static void LastTick(GameContext ctx, float dt) { }

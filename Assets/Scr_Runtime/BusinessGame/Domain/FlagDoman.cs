@@ -6,10 +6,13 @@ namespace BW {
 
     public static class FlagDomain {
         public static FlagEntity Spawn(GameContext ctx, int typeID, Vector2 pos) {
-            FlagEntity flag = GameFactory.Flag_Create(ctx,pos);
+            FlagEntity flag = GameFactory.Flag_Create(ctx, pos);
             flag.typeID = typeID;
             flag.isFlag = true;
+
+            ctx.flagRepository.Add(flag);
             return flag;
         }
+
     }
 }

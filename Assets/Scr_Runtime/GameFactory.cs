@@ -24,7 +24,7 @@ namespace BW {
             FlagEntity flag = GameObject.Instantiate(prefab).GetComponent<FlagEntity>();
 
             flag.Ctor();
-            flag.idSig = ctx.gameEntity.FlagIDRecord;
+            flag.idSig = ctx.gameEntity.flagIDRecord;
 
             flag.SetPos(pos);
 

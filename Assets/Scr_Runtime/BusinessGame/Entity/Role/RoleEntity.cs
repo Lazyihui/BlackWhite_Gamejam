@@ -19,7 +19,7 @@ namespace BW {
             jumpForce = 10;
         }
 
-        public Vector2 Pos() {
+        public Vector2 GetPos() {
             return transform.position;
         }
 

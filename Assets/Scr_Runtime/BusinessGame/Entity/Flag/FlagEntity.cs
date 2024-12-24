@@ -16,5 +16,8 @@ namespace BW {
             transform.position = pos;
         }
 
+        public Vector2 GetPos() {
+            return transform.position;
+        }
     }
 }

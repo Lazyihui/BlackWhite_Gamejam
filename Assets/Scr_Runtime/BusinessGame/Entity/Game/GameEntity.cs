@@ -7,14 +7,14 @@ namespace BW {
 
         public int ownerID;
 
-        public int FlagIDRecord;
+        public int flagIDRecord;
 
         public GameEntity() {
             restFixTime = 0;
             ownerID = 0;
 
             // TODO:
-            FlagIDRecord = 0;
+            flagIDRecord = 1;
         }
     }
 }
