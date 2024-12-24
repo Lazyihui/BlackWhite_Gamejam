@@ -9,6 +9,7 @@ namespace BW {
         public InputCore inputCore;
         // ropository
         public RoleRepository roleRepository;
+        public FlagRepository flagRepository;
         public GameContext() {
             gameEntity = new GameEntity();
 
@@ -18,6 +19,7 @@ namespace BW {
 
             // repositories
             roleRepository = new RoleRepository();
+            flagRepository = new FlagRepository();
         }
 
         public void InJect() {

@@ -70,5 +70,10 @@ namespace BW {
             return role;
         }
 
+        public GameObject Entity_GetFlag() {
+            entities.TryGetValue("Entity_Flag", out GameObject flag);
+            return flag;
+        }
+
     }
 }

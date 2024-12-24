@@ -9,17 +9,12 @@ namespace BW {
         public int typeID;
         public float moveSpeed;
 
-        public bool isjump;
-
-        public bool isAllowJump;
-
+        // jump 
         public int allowJumpTimes;
-
         public float jumpForce;
 
         public void Ctor() {
             moveSpeed = 5;
-            isAllowJump = false;
             allowJumpTimes = 0;
             jumpForce = 10;
         }
@@ -32,17 +27,20 @@ namespace BW {
             return rb.velocity;
         }
 
-
-
         public void Move(Vector2 dir) {
             var velo = rb.velocity;
             float veloy = velo.y;
             velo.x = dir.x * moveSpeed;
             velo.y = veloy;
             rb.velocity = velo;
+
+            // 面向
+            if (dir.x > 0) {
+                transform.localScale = new Vector3(1, 1, 1);
+            } else if (dir.x < 0) {
+                transform.localScale = new Vector3(-1, 1, 1);
+            }
         }
-
-
 
         public void Jump() {
             if (!AllowJump()) {
@@ -52,12 +50,12 @@ namespace BW {
             oldVelo.y = jumpForce;
             rb.velocity = oldVelo;
             allowJumpTimes--;
-
         }
 
         public void EnterGround() {
             allowJumpTimes = 1;
         }
+
         bool AllowJump() {
             return allowJumpTimes > 0;
         }

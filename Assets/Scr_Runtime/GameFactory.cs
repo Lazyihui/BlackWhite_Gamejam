@@ -5,17 +5,30 @@ namespace BW {
 
     public static class GameFactory {
         public static RoleEntity Role_Create(GameContext ctx) {
-
             GameObject prefab = ctx.assetsCore.Entity_GetRole();
             if (prefab == null) {
                 Debug.LogError("Role prefab is null");
             }
-
             RoleEntity role = GameObject.Instantiate(prefab).GetComponent<RoleEntity>();
             role.Ctor();
             role.idSig = ctx.gameEntity.ownerID;
 
             return role;
+        }
+
+        public static FlagEntity Flag_Create(GameContext ctx, Vector2 pos) {
+            GameObject prefab = ctx.assetsCore.Entity_GetFlag();
+            if (prefab == null) {
+                Debug.LogError("Flag prefab is null");
+            }
+            FlagEntity flag = GameObject.Instantiate(prefab).GetComponent<FlagEntity>();
+
+            flag.Ctor();
+            flag.idSig = ctx.gameEntity.FlagIDRecord;
+
+            flag.SetPos(pos);
+
+            return flag;
         }
     }
 }

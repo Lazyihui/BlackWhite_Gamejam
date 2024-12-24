@@ -8,6 +8,8 @@ namespace BW {
 
         public static void Enter(GameContext ctx) {
             RoleEntity role = RoleDomain.Spawn(ctx, 1);
+            Vector2 pos = new Vector2(20.43f, -8.69f);
+            FlagDomain.Spawn(ctx, 1, pos);
         }
 
         public static void Tick(GameContext ctx, float dt) {
