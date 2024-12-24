@@ -30,5 +30,19 @@ namespace BW {
 
             return flag;
         }
+
+        public static MapEntity Map_Create(GameContext ctx, int stageID) {
+            GameObject prefab = ctx.assetsCore.Entity_GetMap(stageID);
+            if (prefab == null) {
+                Debug.LogError("Map prefab is null");
+            }
+            MapEntity map = GameObject.Instantiate(prefab).GetComponent<MapEntity>();
+            map.Ctor();
+            // TODO: 这里不知道这样写对不对
+            map.stageID = stageID;
+            ctx.gameEntity.curMapID = map.stageID;
+
+            return map;
+        }
     }
 }

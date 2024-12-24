@@ -7,8 +7,13 @@ namespace BW {
     public static class Game_Business {
 
         public static void Enter(GameContext ctx) {
+        
+            // map
+            MapDomain.Spawn(ctx, 1);
+
+            // role
             RoleEntity role = RoleDomain.Spawn(ctx, 1);
-            Vector2 pos = new Vector2(20.43f, -8.69f);
+            Vector2 pos = new Vector2(8, -4);
             FlagDomain.Spawn(ctx, 1, pos);
         }
 

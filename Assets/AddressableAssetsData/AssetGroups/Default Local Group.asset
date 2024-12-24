@@ -25,7 +25,13 @@ MonoBehaviour:
     - Panel
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b3e669ef1556d6d469988b2c401a0cd4
-    m_Address: Assets/Res_Runtime/Entity/Flag/Entity_Flag.prefab
+    m_Address: Entity_Flag
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Entity
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9aa7f3ba5cec25c49b7ebf8b78767844
+    m_Address: Entity_Map_Variant_1
     m_ReadOnly: 0
     m_SerializedLabels:
     - Entity
