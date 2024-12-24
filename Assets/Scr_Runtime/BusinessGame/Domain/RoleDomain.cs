@@ -48,11 +48,11 @@ namespace BW {
             float angle = 0;
             Vector2 dir = new Vector2(0, -1);
             RaycastHit2D[] hits = Physics2D.BoxCastAll(role.GetPos(), sixe, angle, dir, 0.4f);
-            
+
             Debug.DrawRay(role.GetPos(), dir * 0.4f, Color.red);
             for (int i = 0; i < hits.Length; i += 1) {
                 RaycastHit2D hit = hits[i];
-                if (hit.collider.gameObject.CompareTag("Ground")) { 
+                if (hit.collider.gameObject.CompareTag("Ground")) {
                     isCollideGound = true;
                     break;
                 }
@@ -85,7 +85,14 @@ namespace BW {
 
         }
 
-
         #endregion
+
+        public static void ChangeRole(GameContext ctx, RoleEntity role) {
+            var input = ctx.inputCore;
+            if (input.isKeyDownE) {
+                Debug.Log("isKeyDownE");
+                role.Toggle();
+            }
+        }
     }
 }

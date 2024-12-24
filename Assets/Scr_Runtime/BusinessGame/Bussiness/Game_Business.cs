@@ -46,8 +46,10 @@ namespace BW {
 
             // map
             MapEntity map = ctx.Get_Map();
+            // role
+            RoleEntity role = ctx.Get_Role();
 
-            MapDomain.ChangeMap(ctx, map);
+            GameUserInterface.ChangeMapRole(ctx, map, role);
 
         }
 

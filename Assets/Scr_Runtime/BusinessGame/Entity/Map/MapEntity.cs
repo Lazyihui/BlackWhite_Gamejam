@@ -14,21 +14,8 @@ namespace BW {
         }
 
         public void Toggle() {
-            if (mapWhite.activeSelf) {
-                SetWhiteActive(false);
-                SetBlackActive(true);
-            } else {
-                SetWhiteActive(true);
-                SetBlackActive(false);
-            }
-        }
-
-        void SetWhiteActive(bool active) {
-            mapWhite.SetActive(active);
-        }
-
-        void SetBlackActive(bool active) {
-            mapBlack.SetActive(active);
+            mapBlack.SetActive(!mapBlack.activeSelf);
+            mapWhite.SetActive(!mapWhite.activeSelf);
         }
 
     }

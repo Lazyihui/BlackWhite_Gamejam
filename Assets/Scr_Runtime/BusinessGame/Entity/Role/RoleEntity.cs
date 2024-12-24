@@ -4,6 +4,8 @@ using UnityEngine;
 namespace BW {
     public class RoleEntity : MonoBehaviour {
         [SerializeField] Rigidbody2D rb;
+        [SerializeField] GameObject roleWhite;
+        [SerializeField] GameObject roleBlack;
 
         public int idSig;
         public int typeID;
@@ -26,6 +28,13 @@ namespace BW {
 
         public Vector2 Velocity() {
             return rb.velocity;
+        }
+
+        //TODO:觉得要用全局的变量来同时控制map和role的状态
+        public void Toggle() {
+            Debug.Log("Toggle");
+            roleBlack.SetActive(!roleBlack.activeSelf);
+            roleWhite.SetActive(!roleWhite.activeSelf);
         }
 
         public void Move(Vector2 dir) {
