@@ -36,6 +36,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Entity
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0994cef353341b142bbba1f703e9c931
+    m_Address: Entity_Map_Variant_2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Entity
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: d4c3f258e9fbd214586f555e4b1682da, type: 2}
   m_SchemaSet:

@@ -25,6 +25,38 @@ namespace BW {
 
         public static void GroundCheck(GameContext ctx, RoleEntity role) {
 
+            bool isCollideGound = false;
+            if (role.Velocity().y > 0) {
+                return;
+            }
+
+            RaycastHit2D[] hits = Physics2D.RaycastAll(role.GetPos(), Vector2.down, 0.4f);
+
+            Debug.DrawRay(role.GetPos(), Vector2.down * 0.4f, Color.red);
+
+            for (int i = 0; i < hits.Length; i += 1) {
+                RaycastHit2D hit = hits[i];
+                if (hit.collider.gameObject.CompareTag("Ground")) {
+                    isCollideGound = true;
+                    break;
+                }
+            }
+
+            // if (hit.collider != null) {
+            //     Debug.Log(hit.collider.name);
+
+            //     if (hit.collider.gameObject.CompareTag("Ground")) {
+            //         Debug.Log("碰到地面");
+            //         isCollideGound = true;
+            //     }
+            // }
+            if (isCollideGound) {
+                role.EnterGround();
+            }
+        }
+
+        public static void GroundCheck1(GameContext ctx, RoleEntity role) {
+
             // Physics2D.BoxCastAll();//向下发射一个射线，检测是否在地面上
             // Physics2D.OverlapCircleAll();//检测是否在地面上
 
