@@ -36,6 +36,8 @@ namespace BW {
             //         break;
             //     }
             // }
+
+            // TODO:为什么可以贴着墙跳
             bool isCollideGound = false;
 
             if (role.Velocity().y > 0) {
@@ -45,11 +47,12 @@ namespace BW {
             Vector2 sixe = new Vector2(0.98f, 0.1f);
             float angle = 0;
             Vector2 dir = new Vector2(0, -1);
-            RaycastHit2D[] hits = Physics2D.BoxCastAll(role.GetPos(), sixe, angle, dir, 0.7f);
-            Debug.DrawRay(role.GetPos(), dir * 0.7f, Color.red);
+            RaycastHit2D[] hits = Physics2D.BoxCastAll(role.GetPos(), sixe, angle, dir, 0.4f);
+            
+            Debug.DrawRay(role.GetPos(), dir * 0.4f, Color.red);
             for (int i = 0; i < hits.Length; i += 1) {
                 RaycastHit2D hit = hits[i];
-                if (hit.collider.gameObject.CompareTag("Ground")) {
+                if (hit.collider.gameObject.CompareTag("Ground")) { 
                     isCollideGound = true;
                     break;
                 }

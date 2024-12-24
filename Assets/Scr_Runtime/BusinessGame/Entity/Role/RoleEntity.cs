@@ -16,7 +16,8 @@ namespace BW {
         public void Ctor() {
             moveSpeed = 5;
             allowJumpTimes = 0;
-            jumpForce = 10;
+            // 决定跳跃高度
+            jumpForce = 5;
         }
 
         public Vector2 GetPos() {

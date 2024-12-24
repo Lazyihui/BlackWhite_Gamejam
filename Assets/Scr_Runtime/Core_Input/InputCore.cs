@@ -9,6 +9,8 @@ namespace BW {
 
         public bool isJumpKeyDown;
 
+        public bool isKeyDownE;
+
         public InputCore() {
             input_Role = new InputController_Player();
             input_Role.Enable();
@@ -36,14 +38,33 @@ namespace BW {
 
             // jump
             {
-                float kbxJ = World.Jump.ReadValue<float>();
-                if (kbxJ > 0) {
+                float kbxk = World.Jump.ReadValue<float>();
+                if (kbxk > 0) {
                     isJumpKeyDown = true;
                 } else {
                     isJumpKeyDown = false;
                 }
             }
 
+            //PressE
+            {
+
+                // TODO: 还不太清楚如何使用 总结InputSystem的使用
+                // bool kbxk = World.PressE.IsPressed();
+                // Debug.Log("PressE:" + kbxk);
+                // if (kbxk) {
+                //     isKeyDownE = true;
+                // } else {
+                //     isKeyDownE = false;
+                // }
+
+                if (World.PressE.triggered) {
+                    isKeyDownE = true;
+                } else {
+                    isKeyDownE = false;
+                }
+
+            }
 
         }
     }

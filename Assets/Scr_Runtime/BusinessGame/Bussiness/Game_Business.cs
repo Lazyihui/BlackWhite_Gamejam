@@ -7,7 +7,7 @@ namespace BW {
     public static class Game_Business {
 
         public static void Enter(GameContext ctx) {
-        
+
             // map
             MapDomain.Spawn(ctx, 1);
 
@@ -42,7 +42,14 @@ namespace BW {
             LastTick(ctx, dt);
         }
 
-        public static void PreTick(GameContext ctx, float dt) { }
+        public static void PreTick(GameContext ctx, float dt) {
+
+            // map
+            MapEntity map = ctx.Get_Map();
+
+            MapDomain.ChangeMap(ctx, map);
+
+        }
 
         public static void LogicTick(GameContext ctx, float dt) {
             var input = ctx.inputCore;
@@ -53,7 +60,7 @@ namespace BW {
             RoleDomain.Jump(ctx, role);
             RoleDomain.GroundCheck(ctx, role);
 
-            RoleDomain.TouchFlag(ctx, role);    
+            RoleDomain.TouchFlag(ctx, role);
         }
 
         public static void LastTick(GameContext ctx, float dt) { }

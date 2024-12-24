@@ -11,7 +11,7 @@ namespace BW {
         public RoleRepository roleRepository;
         public MapRepository mapRepository;
         public FlagRepository flagRepository;
-        
+
         public GameContext() {
             gameEntity = new GameEntity();
 
@@ -32,6 +32,11 @@ namespace BW {
         public RoleEntity Get_Role() {
             roleRepository.TryGet(gameEntity.ownerID, out RoleEntity role);
             return role;
+        }
+
+        public MapEntity Get_Map() {
+            mapRepository.TryGet(gameEntity.curMapID, out MapEntity map);
+            return map;
         }
     }
 

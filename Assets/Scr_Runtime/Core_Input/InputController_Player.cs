@@ -71,6 +71,15 @@ public partial class @InputController_Player: IInputActionCollection2, IDisposab
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""PressE"",
+                    ""type"": ""Button"",
+                    ""id"": ""137bce1c-addb-4c6b-b8fa-bdc3bf6890a6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -172,6 +181,17 @@ public partial class @InputController_Player: IInputActionCollection2, IDisposab
                     ""action"": ""MoveRight"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1a039818-d050-4b59-9823-e92dc5daba30"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PressE"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -185,6 +205,7 @@ public partial class @InputController_Player: IInputActionCollection2, IDisposab
         m_World_MoveLeft = m_World.FindAction("MoveLeft", throwIfNotFound: true);
         m_World_MoveRight = m_World.FindAction("MoveRight", throwIfNotFound: true);
         m_World_Jump = m_World.FindAction("Jump", throwIfNotFound: true);
+        m_World_PressE = m_World.FindAction("PressE", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -251,6 +272,7 @@ public partial class @InputController_Player: IInputActionCollection2, IDisposab
     private readonly InputAction m_World_MoveLeft;
     private readonly InputAction m_World_MoveRight;
     private readonly InputAction m_World_Jump;
+    private readonly InputAction m_World_PressE;
     public struct WorldActions
     {
         private @InputController_Player m_Wrapper;
@@ -260,6 +282,7 @@ public partial class @InputController_Player: IInputActionCollection2, IDisposab
         public InputAction @MoveLeft => m_Wrapper.m_World_MoveLeft;
         public InputAction @MoveRight => m_Wrapper.m_World_MoveRight;
         public InputAction @Jump => m_Wrapper.m_World_Jump;
+        public InputAction @PressE => m_Wrapper.m_World_PressE;
         public InputActionMap Get() { return m_Wrapper.m_World; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -284,6 +307,9 @@ public partial class @InputController_Player: IInputActionCollection2, IDisposab
             @Jump.started += instance.OnJump;
             @Jump.performed += instance.OnJump;
             @Jump.canceled += instance.OnJump;
+            @PressE.started += instance.OnPressE;
+            @PressE.performed += instance.OnPressE;
+            @PressE.canceled += instance.OnPressE;
         }
 
         private void UnregisterCallbacks(IWorldActions instance)
@@ -303,6 +329,9 @@ public partial class @InputController_Player: IInputActionCollection2, IDisposab
             @Jump.started -= instance.OnJump;
             @Jump.performed -= instance.OnJump;
             @Jump.canceled -= instance.OnJump;
+            @PressE.started -= instance.OnPressE;
+            @PressE.performed -= instance.OnPressE;
+            @PressE.canceled -= instance.OnPressE;
         }
 
         public void RemoveCallbacks(IWorldActions instance)
@@ -327,5 +356,6 @@ public partial class @InputController_Player: IInputActionCollection2, IDisposab
         void OnMoveLeft(InputAction.CallbackContext context);
         void OnMoveRight(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
+        void OnPressE(InputAction.CallbackContext context);
     }
 }

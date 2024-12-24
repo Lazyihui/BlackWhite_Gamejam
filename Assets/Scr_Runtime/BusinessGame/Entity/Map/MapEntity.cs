@@ -10,18 +10,26 @@ namespace BW {
 
         // 关卡ID
         public int stageID;
-
         public void Ctor() {
-
         }
 
-        public void SetWhiteActive(bool active) {
+        public void Toggle() {
+            if (mapWhite.activeSelf) {
+                SetWhiteActive(false);
+                SetBlackActive(true);
+            } else {
+                SetWhiteActive(true);
+                SetBlackActive(false);
+            }
+        }
+
+        void SetWhiteActive(bool active) {
             mapWhite.SetActive(active);
         }
 
-        public void SetBlackActive(bool active) {
+        void SetBlackActive(bool active) {
             mapBlack.SetActive(active);
         }
-        
+
     }
 }
