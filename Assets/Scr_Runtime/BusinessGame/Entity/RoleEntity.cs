@@ -11,9 +11,28 @@ namespace BW {
 
         public bool isjump;
 
+        public bool isAllowJump;
+
+        public int allowJumpTimes;
+
+        public float jumpForce;
+
         public void Ctor() {
             moveSpeed = 5;
+            isAllowJump = false;
+            allowJumpTimes = 0;
+            jumpForce = 10;
         }
+
+        public Vector2 Pos() {
+            return transform.position;
+        }
+
+        public Vector2 Velocity() {
+            return rb.velocity;
+        }
+
+
 
         public void Move(Vector2 dir) {
             var velo = rb.velocity;
@@ -23,12 +42,24 @@ namespace BW {
             rb.velocity = velo;
         }
 
+
+
         public void Jump() {
-            if (isjump) {
+            if (!AllowJump()) {
                 return;
             }
-            isjump = true;
-            rb.AddForce(Vector2.up * 10, ForceMode2D.Impulse);
+            Vector2 oldVelo = rb.velocity;
+            oldVelo.y = jumpForce;
+            rb.velocity = oldVelo;
+            allowJumpTimes--;
+
+        }
+
+        public void EnterGround() {
+            allowJumpTimes = 1;
+        }
+        bool AllowJump() {
+            return allowJumpTimes > 0;
         }
     }
 }

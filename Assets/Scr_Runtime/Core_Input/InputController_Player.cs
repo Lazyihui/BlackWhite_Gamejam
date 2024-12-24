@@ -121,7 +121,7 @@ public partial class @InputController_Player: IInputActionCollection2, IDisposab
                 {
                     ""name"": """",
                     ""id"": ""ad06555f-4c1f-4006-9e71-8ca5f1ba76eb"",
-                    ""path"": ""<Keyboard>/j"",
+                    ""path"": ""<Keyboard>/k"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
