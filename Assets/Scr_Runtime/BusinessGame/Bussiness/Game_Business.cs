@@ -14,7 +14,7 @@ namespace BW {
             ctx.uiApp.Panel_Restart_Open();
 
             // map
-            MapDomain.Spawn(ctx, 1);
+            MapDomain.Spawn(ctx, game.stageID);
 
             // role
             RoleEntity role = RoleDomain.Spawn(ctx, 1);
@@ -72,7 +72,10 @@ namespace BW {
             RoleDomain.SetLastDir(ctx, role);
         }
 
-        public static void LastTick(GameContext ctx, float dt) { }
+        public static void LastTick(GameContext ctx, float dt) {
+            
+
+        }
 
     }
 }

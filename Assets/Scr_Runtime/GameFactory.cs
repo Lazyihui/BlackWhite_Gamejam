@@ -21,14 +21,14 @@ namespace BW {
             if (prefab == null) {
                 Debug.LogError("Flag prefab is null");
             }
-            FlagEntity flag = GameObject.Instantiate(prefab).GetComponent<FlagEntity>();
+            FlagEntity entity = GameObject.Instantiate(prefab).GetComponent<FlagEntity>();
 
-            flag.Ctor();
-            flag.idSig = ctx.gameEntity.flagIDRecord;
+            entity.Ctor();
+            entity.idSig = ctx.gameEntity.flagIDRecord;
 
-            flag.SetPos(pos);
+            entity.SetPos(pos);
 
-            return flag;
+            return entity;
         }
 
         public static MapEntity Map_Create(GameContext ctx, int stageID) {

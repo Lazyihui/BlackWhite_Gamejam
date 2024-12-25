@@ -11,6 +11,19 @@ namespace BW {
             return map;
         }
 
+        public static void UnSpawn(GameContext ctx, MapEntity map) {
+            ctx.mapRepository.Remove(map);
+            map.TearDown();
+        }
+
+        public static void ClearAll(GameContext ctx) {
+            int len = ctx.mapRepository.TakeAll(out MapEntity[] maps);
+
+            for (int i = 0; i < len; i++) {
+                MapEntity map = maps[i];
+                UnSpawn(ctx, map);
+            }
+        }
         public static void ChangeMap(GameContext ctx, MapEntity map) {
             var input = ctx.inputCore;
 
@@ -19,5 +32,6 @@ namespace BW {
                 input.isKeyDownE = false;
             }
         }
+
     }
 }

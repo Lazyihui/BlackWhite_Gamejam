@@ -85,5 +85,8 @@ namespace BW {
             }
 
         }
+        public void TearDown() {
+            Destroy(gameObject);
+        }
     }
 }

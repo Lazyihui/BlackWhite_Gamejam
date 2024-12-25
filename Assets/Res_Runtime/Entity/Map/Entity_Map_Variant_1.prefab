@@ -1002,7 +1002,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7209347189202914123, guid: 82af4252c0773254a8ad3385d4876c07, type: 3}
       propertyPath: m_CompositeOperation
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9017416917283269014, guid: 82af4252c0773254a8ad3385d4876c07, type: 3}
       propertyPath: m_Tiles.Array.size

@@ -19,5 +19,9 @@ namespace BW {
         public Vector2 GetPos() {
             return transform.position;
         }
+
+        public void TearDown() {
+            Destroy(gameObject);
+        }
     }
 }

@@ -14,5 +14,19 @@ namespace BW {
             return flag;
         }
 
+        public static void UnSpawn(GameContext ctx, FlagEntity flag) {
+            ctx.flagRepository.Remove(flag);
+            flag.TearDown();
+        }
+
+        public static void ClearAll(GameContext ctx) {
+            int len = ctx.flagRepository.TakeAll(out FlagEntity[] flags);
+
+            for (int i = 0; i < len; i++) {
+                FlagEntity flag = flags[i];
+                UnSpawn(ctx, flag);
+            }
+        }
+
     }
 }

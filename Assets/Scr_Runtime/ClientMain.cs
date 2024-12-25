@@ -44,11 +44,10 @@ namespace BW {
             var events = ctx.uiApp.GetEvents();
 
             events.OnRestart_RestartHandle += () => {
-                Debug.Log("Panel_Restart_RestartClick");
+                GameUserInterface.Restart(ctx);
             };
 
             events.OnLogin_StartGameHandle += () => {
-                Debug.Log("Panel_Login_StartGameClick");
                 ctx.uiApp.Panel_Login_Close();
                 Game_Business.Enter(ctx);
 

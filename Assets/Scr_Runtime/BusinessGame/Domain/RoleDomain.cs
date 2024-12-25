@@ -10,6 +10,20 @@ namespace BW {
             ctx.roleRepository.Add(role);
             return role;
         }
+
+        public static void UnSpawn(GameContext ctx, RoleEntity role) {
+            ctx.roleRepository.Remove(role);
+            role.TearDown();
+        }
+
+        public static void ClearAll(GameContext ctx) {
+            int len = ctx.roleRepository.TakeAll(out RoleEntity[] roles);
+            for (int i = 0; i < len; i++) {
+                RoleEntity role = roles[i];
+                UnSpawn(ctx, role);
+            }
+        }
+
         #region Move
         public static void Move(RoleEntity role, Vector2 dir) {
             role.Move(dir);
@@ -47,8 +61,6 @@ namespace BW {
 
         public static void X_InGround(GameContext ctx, RoleEntity role) {
             Collider2D[] hits = Physics2D.OverlapPointAll(role.GetPos());
-
-            Debug.DrawRay(role.GetPos(), Vector2.down * 0.2f, Color.yellow);
 
             for (int i = 0; i < hits.Length; i += 1) {
                 Collider2D hit = hits[i];
@@ -151,5 +163,12 @@ namespace BW {
                 role.lastDir = curDir;
             }
         }
+
+        public static void ClearAll(GameContext ctx, RoleEntity role) {
+            ctx.roleRepository.Clear();
+
+        }
+
+
     }
 }

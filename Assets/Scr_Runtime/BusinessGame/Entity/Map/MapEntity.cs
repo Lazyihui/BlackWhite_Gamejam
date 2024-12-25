@@ -11,6 +11,13 @@ namespace BW {
         // 关卡ID
         public int stageID;
         public void Ctor() {
+            mapWhite.SetActive(true);
+            mapBlack.SetActive(false);
+        }
+
+        public void ReCtor() {
+            mapWhite.SetActive(true);
+            mapBlack.SetActive(false);
         }
 
         public void Toggle() {
@@ -18,5 +25,9 @@ namespace BW {
             mapWhite.SetActive(!mapWhite.activeSelf);
         }
 
+        public void TearDown() {
+            Destroy(gameObject);
+        }
+        
     }
 }
