@@ -82,6 +82,41 @@ public class UIApp {
         }
         panel.TearDown();
     }
+    #endregion
+
+    #region    Panel_NextStage
+
+    public void Panel_NextStage_Open() {
+        Panel_NextStage panel = ctx.panel_NextStage;
+
+        if (panel == null) {
+            GameObject go = ctx.assetsCore.Panel_GetNextStage();
+            if (!go) {
+                Debug.LogError("Panel_NextStage not found");
+                return;
+            }
+
+            panel = GameObject.Instantiate(go, ctx.canvas.transform).GetComponent<Panel_NextStage>();
+            panel.Ctor();
+            panel.OnEnterNextStageGameHandler = () => {
+                ctx.uiEvent.Panel_NextStage_EnterNextStageClick();
+            };
+            panel.OnReStartGameHandler = () => {
+                ctx.uiEvent.Panel_NextStage_ReStartGameClick();
+            };
+        }
+
+        ctx.panel_NextStage = panel;
+    }
+
+    public void Panel_NextStage_Close() {
+        Panel_NextStage panel = ctx.panel_NextStage;
+        if (panel == null) {
+            return;
+        }
+        panel.TearDown();
+    }
 
     #endregion
+
 }

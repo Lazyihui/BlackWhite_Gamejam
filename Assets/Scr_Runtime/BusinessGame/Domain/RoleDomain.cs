@@ -129,6 +129,9 @@ namespace BW {
                     float dis = Vector2.Distance(rolePos, flagPos);
                     if (dis < 0.5f) {
                         Debug.Log("游戏胜利");
+                        ctx.uiApp.Panel_NextStage_Open();
+
+                        GameUserInterface.ClearAllGameDate(ctx);
                     }
                 }
             }

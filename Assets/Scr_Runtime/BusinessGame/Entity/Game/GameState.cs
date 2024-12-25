@@ -6,6 +6,7 @@ public enum  GameState{
 
     Game,
 
+    NextStage,
     GameOver,
 
 

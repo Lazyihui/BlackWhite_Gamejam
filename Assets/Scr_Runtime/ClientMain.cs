@@ -52,6 +52,16 @@ namespace BW {
                 Game_Business.Enter(ctx);
 
             };
+
+            events.OnNextStage_EnterNextStageHandle += () => {
+                ctx.uiApp.Panel_NextStage_Close();
+                Game_Business.Enter(ctx);
+            };
+
+            events.OnNextStage_ReStartGameHandle += () => {
+                ctx.uiApp.Panel_NextStage_Close();
+                Game_Business.Enter(ctx);
+            };
         }
 
         void Update() {

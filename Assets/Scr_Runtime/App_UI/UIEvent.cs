@@ -11,6 +11,7 @@ public class UIEvent {
         }
     }
 
+    #region Panel_Login
     public Action OnLogin_StartGameHandle;
 
     public void Panel_Login_StartGameClick() {
@@ -18,4 +19,23 @@ public class UIEvent {
             OnLogin_StartGameHandle.Invoke();
         }
     }
+
+    #endregion
+    
+    #region  Panel_NextStage
+    public Action OnNextStage_EnterNextStageHandle;
+    public void Panel_NextStage_EnterNextStageClick() {
+        if (OnNextStage_EnterNextStageHandle != null) {
+            OnNextStage_EnterNextStageHandle.Invoke();
+        }
+    }
+
+    public Action OnNextStage_ReStartGameHandle;
+
+    public void Panel_NextStage_ReStartGameClick() {
+        if (OnNextStage_ReStartGameHandle != null) {
+            OnNextStage_ReStartGameHandle.Invoke();
+        }
+    }
+    #endregion
 }
