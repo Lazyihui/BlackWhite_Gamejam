@@ -178,3 +178,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05536a78f93a1024e848c707674da640, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  btnRestart: {fileID: 5984244436869970269}

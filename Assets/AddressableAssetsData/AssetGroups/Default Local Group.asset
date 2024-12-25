@@ -22,7 +22,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - Entity
-    - Panel
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b3e669ef1556d6d469988b2c401a0cd4
     m_Address: Entity_Flag
@@ -50,6 +49,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 86ffd0247082ec44b83cc9936604b5ab
     m_Address: Panel_Restart
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Panel
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e0727d095551fd343a643fb5a8da351b
+    m_Address: Panel_Login
     m_ReadOnly: 0
     m_SerializedLabels:
     - Panel

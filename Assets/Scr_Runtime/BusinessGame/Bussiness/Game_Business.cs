@@ -7,6 +7,11 @@ namespace BW {
     public static class Game_Business {
 
         public static void Enter(GameContext ctx) {
+            var game = ctx.gameEntity;
+            game.state = GameState.Game;
+
+            // ui
+            ctx.uiApp.Panel_Restart_Open();
 
             // map
             MapDomain.Spawn(ctx, 1);
@@ -21,8 +26,6 @@ namespace BW {
             PreTick(ctx, dt);
 
             ref float restFixTime = ref ctx.gameEntity.restFixTime;
-
-            restFixTime += dt;
 
             restFixTime += dt;
             const float FIX_INTERVAL = 0.020f;

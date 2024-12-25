@@ -33,7 +33,6 @@ namespace BW {
                 isInit = true;
 
                 // GameEnter;
-                Game_Business.Enter(ctx);
                 Login_Business.Enter(ctx);
             };
 
@@ -42,12 +41,23 @@ namespace BW {
         }
 
         void Binding() {
+            var events = ctx.uiApp.GetEvents();
 
+            events.OnRestart_RestartHandle += () => {
+                Debug.Log("Panel_Restart_RestartClick");
+            };
+
+            events.OnLogin_StartGameHandle += () => {
+                Debug.Log("Panel_Login_StartGameClick");
+                ctx.uiApp.Panel_Login_Close();
+                Game_Business.Enter(ctx);
+
+            };
         }
 
         void Update() {
 
-            if(!isInit){
+            if (!isInit) {
                 return;
             }
 
@@ -56,8 +66,14 @@ namespace BW {
             // Input
             ctx.inputCore.Process();
 
-            Game_Business.Tick(ctx, dt);
+            // Tick
+            var game = ctx.gameEntity;
 
+            if (game.state == GameState.Login) {
+                Login_Business.Tick(ctx, dt);
+            } else if (game.state == GameState.Game) {
+                Game_Business.Tick(ctx, dt);
+            }
         }
 
 

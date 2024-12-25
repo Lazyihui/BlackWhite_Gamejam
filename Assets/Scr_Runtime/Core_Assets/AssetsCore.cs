@@ -85,5 +85,10 @@ namespace BW {
             panels.TryGetValue("Panel_Restart", out GameObject panel);
             return panel;
         }
+
+        public GameObject Panel_GetLogin() {
+            panels.TryGetValue("Panel_Login", out GameObject panel);
+            return panel;
+        }
     }
 }

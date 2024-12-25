@@ -2,58 +2,39 @@ using BW;
 using System;
 using UnityEngine;
 
-public class UIApp
-{
+public class UIApp {
     UIContext ctx;
 
     public UIEvent events => ctx.uiEvent;
 
-    public UIApp()
-    {
+    public UIApp() {
         ctx = new UIContext();
     }
 
-    public UIEvent GetEvents()
-    {
+    public UIEvent GetEvents() {
         return ctx.uiEvent;
     }
 
-    public void SetEvents(UIEvent value)
-    {
+    public void SetEvents(UIEvent value) {
         ctx.uiEvent = value;
     }
 
-    public void Inject(AssetsCore assetsCore, Canvas canvas)
-    {
+    public void Inject(AssetsCore assetsCore, Canvas canvas) {
         ctx.Inject(assetsCore, canvas);
     }
 
-    public void Panel_Restart_Open()
-    {
+    #region     Panel_Login
+    public void Panel_Restart_Open() {
         Panel_Restart panel = ctx.panel_Restart;
 
-        if(panel == null)
-        {
-            // Debug.Assert(ctx != null, "UIContext is null");
-            // Debug.Assert(ctx.canvas != null, "Canvas is null");
-            // GameObject go = ctx.assetsCore.Panel_GetRestart();
-
-            // panel = GameObject.Instantiate(go).GetComponent<Panel_Restart>();
-            // panel.Ctor();
-
-            // panel.OnClickRestartHandle += () => {
-            //     ctx.uiEvent.Panel_Restart_RestartClick();
-            // };
-
-            GameObject restart = ctx.assetsCore.Panel_GetRestart();
-
-            if(!restart)
-            {
+        if (panel == null) {
+            GameObject go = ctx.assetsCore.Panel_GetRestart();
+            if (!go) {
                 Debug.LogError("Panel_Restart not found");
                 return;
             }
 
-            panel = GameObject.Instantiate(restart, ctx.canvas.transform).GetComponent<Panel_Restart>();
+            panel = GameObject.Instantiate(go, ctx.canvas.transform).GetComponent<Panel_Restart>();
             panel.Ctor();
             panel.OnClickRestartHandle = () => {
                 ctx.uiEvent.Panel_Restart_RestartClick();
@@ -63,14 +44,44 @@ public class UIApp
         ctx.panel_Restart = panel;
     }
 
-    public void Panel_Restart_Close()
-    {
+    public void Panel_Restart_Close() {
         Panel_Restart panel = ctx.panel_Restart;
+        if (panel == null) {
+            return;
+        }
+        panel.TearDown();
 
-        if(panel == null)
-        {
+    }
+    #endregion
+
+    #region    Panel_Login
+    public void Panel_Login_Open() {
+        Panel_Login panel = ctx.panel_Login;
+
+        if (panel == null) {
+            GameObject go = ctx.assetsCore.Panel_GetLogin();
+            if (!go) {
+                Debug.LogError("Panel_Login not found");
+                return;
+            }
+
+            panel = GameObject.Instantiate(go, ctx.canvas.transform).GetComponent<Panel_Login>();
+            panel.Ctor();
+            panel.OnStartGameHandler = () => {
+                ctx.uiEvent.Panel_Login_StartGameClick();
+            };
+        }
+
+        ctx.panel_Login = panel;
+    }
+
+    public void Panel_Login_Close() {
+        Panel_Login panel = ctx.panel_Login;
+        if (panel == null) {
             return;
         }
         panel.TearDown();
     }
+
+    #endregion
 }
