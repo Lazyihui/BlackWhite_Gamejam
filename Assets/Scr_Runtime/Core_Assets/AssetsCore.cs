@@ -12,7 +12,6 @@ namespace BW {
     public class AssetsCore {
         public Dictionary<string, GameObject> entities;
 
-
         public AsyncOperationHandle entitiesHandle;
 
         public Dictionary<string, GameObject> panels;
@@ -81,5 +80,10 @@ namespace BW {
             return map;
         }
 
+        // Panel
+        public GameObject Panel_GetRestart() {
+            panels.TryGetValue("Panel_Restart", out GameObject panel);
+            return panel;
+        }
     }
 }

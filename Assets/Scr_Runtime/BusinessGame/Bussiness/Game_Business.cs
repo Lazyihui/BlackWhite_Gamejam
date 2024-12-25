@@ -13,7 +13,7 @@ namespace BW {
 
             // role
             RoleEntity role = RoleDomain.Spawn(ctx, 1);
-            Vector2 pos = new Vector2(8, -4);
+            Vector2 pos = new Vector2(7.75f, -3.9f);
             FlagDomain.Spawn(ctx, 1, pos);
         }
 

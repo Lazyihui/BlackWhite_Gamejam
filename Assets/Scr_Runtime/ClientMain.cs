@@ -20,6 +20,9 @@ namespace BW {
             // Canvas screenCanvas = GameObject.Find("ScreenCanvas").GetComponent<Canvas>();
             // Canvas worldCanvas = GameObject.Find("WorldCanvas").GetComponent<Canvas>();
 
+            Canvas canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
+            ctx.InJect(canvas);
+
             // Binding
             Binding();
 
@@ -31,6 +34,7 @@ namespace BW {
 
                 // GameEnter;
                 Game_Business.Enter(ctx);
+                Login_Business.Enter(ctx);
             };
 
             action.Invoke();

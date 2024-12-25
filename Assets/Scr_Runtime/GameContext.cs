@@ -7,6 +7,7 @@ namespace BW {
         // Core
         public AssetsCore assetsCore;
         public InputCore inputCore;
+        public UIApp uiApp;
         // ropository
         public RoleRepository roleRepository;
         public MapRepository mapRepository;
@@ -18,6 +19,7 @@ namespace BW {
             // Core
             assetsCore = new AssetsCore();
             inputCore = new InputCore();
+            uiApp = new UIApp();
 
             // repositories
             roleRepository = new RoleRepository();
@@ -25,8 +27,8 @@ namespace BW {
             flagRepository = new FlagRepository();
         }
 
-        public void InJect() {
-
+        public void InJect(Canvas canvas) {
+            uiApp.Inject(assetsCore, canvas);
         }
 
         public RoleEntity Get_Role() {
