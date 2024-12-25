@@ -57,13 +57,16 @@ namespace BW {
             var input = ctx.inputCore;
 
             RoleEntity role = ctx.Get_Role();
-            // TODO: 是传入Vector2还是传入Ctx
+            // TODO:可以加一个RoleDomain.Tick(ctx,role)来处理role的逻辑
+            // TODO: 问： 是传入Vector2还是传入Ctx 
             RoleDomain.Move(role, input.moveAxis);
             RoleDomain.Jump(ctx, role);
             RoleDomain.GroundCheck(ctx, role);
+            RoleDomain.X_InGround(ctx, role);
 
             RoleDomain.TouchFlag(ctx, role);
             RoleDomain.Shuttleboundary(ctx, role);
+            RoleDomain.SetLastDir(ctx, role);
         }
 
         public static void LastTick(GameContext ctx, float dt) { }

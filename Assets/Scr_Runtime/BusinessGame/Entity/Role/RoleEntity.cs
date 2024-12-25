@@ -15,6 +15,9 @@ namespace BW {
         public int allowJumpTimes;
         public float jumpForce;
 
+        // 上一次的面向
+        public Vector2 lastDir;
+
         public void Ctor() {
             moveSpeed = 5;
             allowJumpTimes = 0;
@@ -36,7 +39,6 @@ namespace BW {
 
         //TODO:觉得要用全局的变量来同时控制map和role的状态
         public void Toggle() {
-            Debug.Log("Toggle");
             roleBlack.SetActive(!roleBlack.activeSelf);
             roleWhite.SetActive(!roleWhite.activeSelf);
         }
@@ -72,6 +74,16 @@ namespace BW {
 
         bool AllowJump() {
             return allowJumpTimes > 0;
+        }
+
+        public void FleeGround() {
+            if (this.lastDir.x == 1) {
+                this.transform.position += new Vector3(-1f, 0, 0);
+            }
+            if (this.lastDir.x == -1) {
+                this.transform.position += new Vector3(1f, 0, 0);
+            }
+
         }
     }
 }

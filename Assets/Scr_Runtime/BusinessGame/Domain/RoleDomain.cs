@@ -32,8 +32,6 @@ namespace BW {
 
             RaycastHit2D[] hits = Physics2D.RaycastAll(role.GetPos(), Vector2.down, 0.4f);
 
-            Debug.DrawRay(role.GetPos(), Vector2.down * 0.4f, Color.red);
-
             for (int i = 0; i < hits.Length; i += 1) {
                 RaycastHit2D hit = hits[i];
                 if (hit.collider.gameObject.CompareTag("Ground")) {
@@ -42,17 +40,25 @@ namespace BW {
                 }
             }
 
-            // if (hit.collider != null) {
-            //     Debug.Log(hit.collider.name);
-
-            //     if (hit.collider.gameObject.CompareTag("Ground")) {
-            //         Debug.Log("碰到地面");
-            //         isCollideGound = true;
-            //     }
-            // }
             if (isCollideGound) {
                 role.EnterGround();
             }
+        }
+
+        public static void X_InGround(GameContext ctx, RoleEntity role) {
+            Collider2D[] hits = Physics2D.OverlapPointAll(role.GetPos());
+
+            Debug.DrawRay(role.GetPos(), Vector2.down * 0.2f, Color.yellow);
+
+            for (int i = 0; i < hits.Length; i += 1) {
+                Collider2D hit = hits[i];
+                if (hit.gameObject.CompareTag("Ground")) {
+                    role.FleeGround();
+                    break;
+                }
+            }
+
+
         }
 
         public static void GroundCheck1(GameContext ctx, RoleEntity role) {
@@ -70,7 +76,7 @@ namespace BW {
             //     }
             // }
 
-            // TODO:为什么可以贴着墙跳
+            // TODO:为什么可以贴着墙跳 :解决 加一个摩擦力（没用摩擦力）
             bool isCollideGound = false;
 
             if (role.Velocity().y > 0) {
@@ -82,7 +88,6 @@ namespace BW {
             Vector2 dir = new Vector2(0, -1);
             RaycastHit2D[] hits = Physics2D.BoxCastAll(role.GetPos(), sixe, angle, dir, 0.4f);
 
-            Debug.DrawRay(role.GetPos(), dir * 0.4f, Color.red);
             for (int i = 0; i < hits.Length; i += 1) {
                 RaycastHit2D hit = hits[i];
                 if (hit.collider.gameObject.CompareTag("Ground")) {
@@ -137,6 +142,14 @@ namespace BW {
                 pos.x = 11f;
             }
             role.SetPos(pos);
+        }
+
+        public static void SetLastDir(GameContext ctx, RoleEntity role) {
+            var input = ctx.inputCore;
+            Vector2 curDir = input.moveAxis;
+            if (curDir != Vector2.zero) {
+                role.lastDir = curDir;
+            }
         }
     }
 }
