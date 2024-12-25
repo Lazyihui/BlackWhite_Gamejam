@@ -20,7 +20,7 @@ namespace BW {
             restFixTime = 0;
 
             state = GameState.Login;
-            stageCurID = 1;
+            stageCurID = 5;
 
             ownerID = 0;
             curMapID = 0;
