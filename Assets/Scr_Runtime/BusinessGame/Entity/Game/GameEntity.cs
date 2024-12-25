@@ -7,7 +7,7 @@ namespace BW {
 
         // Game
         public GameState state;
-        public int stageID;
+        public int stageCurID;
 
         public int ownerID;
         public int curMapID;
@@ -20,7 +20,7 @@ namespace BW {
             restFixTime = 0;
 
             state = GameState.Login;
-            stageID = 1;
+            stageCurID = 1;
 
             ownerID = 0;
             curMapID = 0;

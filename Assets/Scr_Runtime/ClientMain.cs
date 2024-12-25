@@ -55,6 +55,7 @@ namespace BW {
 
             events.OnNextStage_EnterNextStageHandle += () => {
                 ctx.uiApp.Panel_NextStage_Close();
+                ctx.gameEntity.stageCurID++;
                 Game_Business.Enter(ctx);
             };
 
