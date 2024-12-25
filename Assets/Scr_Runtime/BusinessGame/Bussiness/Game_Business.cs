@@ -9,7 +9,7 @@ namespace BW {
         public static void Enter(GameContext ctx) {
 
             // map
-            MapDomain.Spawn(ctx, 2);
+            MapDomain.Spawn(ctx, 1);
 
             // role
             RoleEntity role = RoleDomain.Spawn(ctx, 1);
