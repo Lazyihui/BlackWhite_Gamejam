@@ -120,28 +120,48 @@ namespace BW {
 
             events.OnSelectStage1_SelectStageHandle += (int stageID) => {
                 ctx.uiApp.Panel_SelectStage_Close();
-                Debug.Log(stageID);
+                Debug.Log(ctx.gameEntity.stageCurID);
+
+                game.stageCurID = stageID;
+                GameUserInterface.ClearAllGameData(ctx);
+                Game_Business.Enter(ctx);
             };
 
 
             events.OnSelectStage2_SelectStageHandle += (int stageID) => {
                 ctx.uiApp.Panel_SelectStage_Close();
-                Debug.Log(stageID);
+
+                GameUserInterface.ClearAllGameData(ctx);
+
+                game.stageCurID = stageID;
+                Game_Business.Enter(ctx);
             };
 
             events.OnSelectStage3_SelectStageHandle += (int stageID) => {
                 ctx.uiApp.Panel_SelectStage_Close();
-                Debug.Log(stageID);
+
+                GameUserInterface.ClearAllGameData(ctx);
+
+                game.stageCurID = stageID;
+                Game_Business.Enter(ctx);
             };
 
             events.OnSelectStage4_SelectStageHandle += (int stageID) => {
                 ctx.uiApp.Panel_SelectStage_Close();
-                Debug.Log(stageID);
+
+                GameUserInterface.ClearAllGameData(ctx);
+
+                game.stageCurID = stageID;
+                Game_Business.Enter(ctx);
             };
 
             events.OnSelectStage5_SelectStageHandle += (int stageID) => {
                 ctx.uiApp.Panel_SelectStage_Close();
-                Debug.Log(stageID);
+
+                GameUserInterface.ClearAllGameData(ctx);
+
+                game.stageCurID = stageID;
+                Game_Business.Enter(ctx);
             };
 
 
