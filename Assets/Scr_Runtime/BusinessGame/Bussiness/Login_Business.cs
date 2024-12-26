@@ -4,8 +4,20 @@ using UnityEngine;
 
 public static class Login_Business {
     public static void Enter(GameContext ctx) {
-        ctx.uiApp.Panel_Login_Open();
+        var game = ctx.gameEntity;
+        game.state = GameState.LoginEnter;
+
+        // ui
+        ctx.uiApp.Panel_StartGame_Open();
+
+        // map
+        MapDomain.Spawn(ctx, 0);
+
+        // role
+        RoleEntity role = RoleDomain.Spawn(ctx, 1);
+
     }
+
     public static void Tick(GameContext ctx, float dt) {
         PreTick(ctx, dt);
 
@@ -31,11 +43,27 @@ public static class Login_Business {
 
     public static void PreTick(GameContext ctx, float dt) {
 
+        // map
+        MapEntity map = ctx.Get_Map();
+        // role
+        RoleEntity role = ctx.Get_Role();
+
+        GameUserInterface.ChangeMapRole(ctx, map, role);
 
     }
 
     public static void LogicTick(GameContext ctx, float dt) {
+        var input = ctx.inputCore;
 
+        RoleEntity role = ctx.Get_Role();
+        RoleDomain.Move(role, input.moveAxis);
+        RoleDomain.Jump(ctx, role);
+
+        RoleDomain.GroundCheck(ctx, role);
+        RoleDomain.X_InGround(ctx, role);
+
+        RoleDomain.Shuttleboundary(ctx, role);
+        RoleDomain.SetLastDir(ctx, role);
     }
 
     public static void LastTick(GameContext ctx, float dt) { }

@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 namespace BW {
-    public class Panel_Login : MonoBehaviour {
+    public class Panel_StartGame : MonoBehaviour {
         [SerializeField] Button btn_StartGame;
         public Action OnStartGameHandler;
 

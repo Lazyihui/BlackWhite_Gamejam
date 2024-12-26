@@ -7,8 +7,9 @@ public class UIContext {
 
     //panel
     public Panel_Restart panel_Restart;
-    public Panel_Login panel_Login;
     public Panel_NextStage panel_NextStage;
+    public Panel_StartGame panel_StartGame;
+
 
     //core
     public AssetsCore assetsCore;

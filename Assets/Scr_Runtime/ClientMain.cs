@@ -44,17 +44,13 @@ namespace BW {
             var events = ctx.uiApp.GetEvents();
             var game = ctx.gameEntity;
 
+            // panel_Restart
             events.OnRestart_RestartHandle += () => {
-                Debug.Log("OnRestart_RestartHandle");
                 GameUserInterface.Restart(ctx);
             };
 
-            events.OnLogin_StartGameHandle += () => {
-                ctx.uiApp.Panel_Login_Close();
-                Game_Business.Enter(ctx);
 
-            };
-
+            // panel_NextStage
             events.OnNextStage_EnterNextStageHandle += () => {
                 ctx.uiApp.Panel_NextStage_Close();
 
@@ -69,6 +65,15 @@ namespace BW {
                 GameUserInterface.ClearAllGameDate(ctx);
                 Game_Business.Enter(ctx);
 
+            };
+
+            // panel_StartGame
+
+            events.On_StartGame_StartGameHandler += () => {
+                ctx.uiApp.Panel_StartGame_Close();
+
+                GameUserInterface.ClearAllGameDate(ctx);
+                Game_Business.Enter(ctx);
             };
         }
 
@@ -86,7 +91,7 @@ namespace BW {
             // Tick
             var game = ctx.gameEntity;
 
-            if (game.state == GameState.Login) {
+            if (game.state == GameState.LoginEnter) {
                 Login_Business.Tick(ctx, dt);
             } else if (game.state == GameState.Game) {
                 Game_Business.Tick(ctx, dt);

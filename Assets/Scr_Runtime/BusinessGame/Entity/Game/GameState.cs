@@ -1,8 +1,10 @@
-public enum  GameState{
+public enum GameState {
 
     None,
 
     Login,
+
+    LoginEnter,
 
     Game,
 

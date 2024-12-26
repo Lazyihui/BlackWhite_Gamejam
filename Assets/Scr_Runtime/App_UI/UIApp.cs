@@ -54,36 +54,6 @@ public class UIApp {
     }
     #endregion
 
-    #region    Panel_Login
-    public void Panel_Login_Open() {
-        Panel_Login panel = ctx.panel_Login;
-
-        if (panel == null) {
-            GameObject go = ctx.assetsCore.Panel_GetLogin();
-            if (!go) {
-                Debug.LogError("Panel_Login not found");
-                return;
-            }
-
-            panel = GameObject.Instantiate(go, ctx.canvas.transform).GetComponent<Panel_Login>();
-            panel.Ctor();
-            panel.OnStartGameHandler = () => {
-                ctx.uiEvent.Panel_Login_StartGameClick();
-            };
-        }
-
-        ctx.panel_Login = panel;
-    }
-
-    public void Panel_Login_Close() {
-        Panel_Login panel = ctx.panel_Login;
-        if (panel == null) {
-            return;
-        }
-        panel.TearDown();
-    }
-    #endregion
-
     #region    Panel_NextStage
 
     public void Panel_NextStage_Open() {
@@ -116,6 +86,38 @@ public class UIApp {
         }
         panel.TearDown();
     }
+
+    #endregion
+
+    #region    Panel_StartGame  
+    public void Panel_StartGame_Open() {
+        Panel_StartGame panel = ctx.panel_StartGame;
+
+        if (panel == null) {
+            GameObject go = ctx.assetsCore.Panel_GetStartGame();
+            if (!go) {
+                Debug.LogError("Panel_StartGame not found");
+                return;
+            }
+
+            panel = GameObject.Instantiate(go, ctx.canvas.transform).GetComponent<Panel_StartGame>();
+            panel.Ctor();
+            panel.OnStartGameHandler = () => {
+                ctx.uiEvent.Panel_StartGame_StartGameClick();
+            };
+        }
+
+        ctx.panel_StartGame = panel;
+    }
+
+    public void Panel_StartGame_Close() {
+        Panel_StartGame panel = ctx.panel_StartGame;
+        if (panel == null) {
+            return;
+        }
+        panel.TearDown();
+    }
+
 
     #endregion
 

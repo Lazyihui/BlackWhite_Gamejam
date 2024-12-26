@@ -85,13 +85,13 @@ namespace BW {
             return panel;
         }
 
-        public GameObject Panel_GetLogin() {
-            panels.TryGetValue("Panel_Login", out GameObject panel);
+        public GameObject Panel_GetNextStage() {
+            panels.TryGetValue("Panel_NextStage", out GameObject panel);
             return panel;
         }
 
-        public GameObject Panel_GetNextStage() {
-            panels.TryGetValue("Panel_NextStage", out GameObject panel);
+        public GameObject Panel_GetStartGame() {
+            panels.TryGetValue("Panel_StartGame", out GameObject panel);
             return panel;
         }
     }
