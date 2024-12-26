@@ -89,7 +89,7 @@ namespace BW {
 
                 ctx.uiApp.Panel_GameOver_Close();
                 GameUserInterface.ClearAllGameData(ctx);
-                Game_Business.Enter(ctx);
+                Login_Business.Enter(ctx);
 
             };
 

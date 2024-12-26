@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxStageID: 5
-  curStageID: 1
+  curStageID: 5
 --- !u!1 &1663008961
 GameObject:
   m_ObjectHideFlags: 0
