@@ -7,10 +7,21 @@ namespace BW {
         [SerializeField] Button btn_StartGame;
         public Action OnStartGameHandler;
 
+        [SerializeField] Button btn_SelectStage;
+
+        public Action SelectStageHandler;
+
+
         public void Ctor() {
             btn_StartGame.onClick.AddListener(() => {
                 if (OnStartGameHandler != null) {
                     OnStartGameHandler();
+                }
+            });
+
+            btn_SelectStage.onClick.AddListener(() => {
+                if (SelectStageHandler != null) {
+                    SelectStageHandler();
                 }
             });
         }
@@ -21,7 +32,7 @@ namespace BW {
         }
 
         public void TearDown() {
-            
+
             Destroy(gameObject);
         }
 
