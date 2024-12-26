@@ -50,6 +50,7 @@ public class UIApp {
             return;
         }
         panel.TearDown();
+        ctx.panel_Restart = null;
 
     }
     #endregion
