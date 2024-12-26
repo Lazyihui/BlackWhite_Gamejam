@@ -270,7 +270,7 @@ TextureImporter:
         width: 200
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -291,7 +291,7 @@ TextureImporter:
         width: 1000
         height: 500
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -299,6 +299,27 @@ TextureImporter:
       bones: []
       spriteID: 76b546f8892a60a47a33f7baf9bff971
       internalID: 1366868991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeleceButton
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 156
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7151cc629afaed04499997da9e48f0ac
+      internalID: -1826742305
       vertices: []
       indices: 
       edges: []
@@ -315,6 +336,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       NextBG: 1366868991
+      SeleceButton: -1826742305
       Sprite_0: 12323174
       Sprite_1: -1694170875
       Sprite_2: -1796906331
