@@ -144,6 +144,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 2048199831587147637}
   clipJump: {fileID: 8300000, guid: b0dd4e9e9546d0c4b94232480e2a251e, type: 3}
-  clipBG: {fileID: 8300000, guid: 59ae18e7080e9a842ba22f4616c670ee, type: 3}
+  clipBG: {fileID: 8300000, guid: d93b35c2571d05d44953592eea39fdc5, type: 3}
   idSig: 0
   typeID: 0

@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea77c6f6d06a3054883d33d8dfc980d3, type: 3}
   m_Name: AudioTM_1_Jump
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: b0dd4e9e9546d0c4b94232480e2a251e, type: 3}
+  typeIDname: 
+  clip: {fileID: 8300000, guid: 6f642b7bc18fdbb4a9fee12115698453, type: 3}
+  isLoop: 0
   typeID: 1
