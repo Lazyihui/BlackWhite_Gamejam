@@ -10,6 +10,8 @@ namespace BW {
 
         [SerializeField] int maxStageID;
 
+        [SerializeField] int curStageID;
+
         GameContext ctx;
 
         bool isTearDown = false;
@@ -25,6 +27,7 @@ namespace BW {
             Canvas canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
             ctx.InJect(canvas);
             ctx.gameEntity.maxStageID = maxStageID;
+            ctx.gameEntity.stageCurID = curStageID;
 
             // Binding
             Binding();
@@ -79,6 +82,18 @@ namespace BW {
                 GameUserInterface.ClearAllGameDate(ctx);
                 Game_Business.Enter(ctx);
             };
+
+            // Panel_GameOver
+
+            events.OnGameOver_AgainGameHandler += () => {
+
+            };
+
+            events.OnGameOver_QuitGameHandler += () => {
+                // 退出程序
+            };
+
+
         }
 
         void Update() {

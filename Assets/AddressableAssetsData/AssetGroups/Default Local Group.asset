@@ -65,6 +65,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - AudioTM
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e8b10b817892f3144ba805d1aa8fc94e
+    m_Address: Panel_GameOver
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Panel
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: d4c3f258e9fbd214586f555e4b1682da, type: 2}
   m_SchemaSet:

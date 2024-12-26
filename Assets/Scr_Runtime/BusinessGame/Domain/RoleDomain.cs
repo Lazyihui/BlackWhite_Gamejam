@@ -33,7 +33,7 @@ namespace BW {
             if (!input.isJumpKeyDown) {
                 return;
             }
-             if (!role.AllowJump()) {
+            if (!role.AllowJump()) {
                 return;
             }
             role.Jump();
@@ -133,10 +133,19 @@ namespace BW {
                     Vector2 flagPos = flag.GetPos();
                     float dis = Vector2.Distance(rolePos, flagPos);
                     if (dis < 0.5f) {
-                        Debug.Log("游戏胜利");
-                        role.StopMove();
-                        ctx.uiApp.Panel_NextStage_Open();
-                        game.state = GameState.NextStage;
+                        if (game.stageCurID < game.maxStageID) {
+                            Debug.Log("进入下一关游戏胜利");
+
+                            role.StopMove();
+                            ctx.uiApp.Panel_NextStage_Open();
+                            game.state = GameState.NextStage;
+                        } else {
+                            Debug.Log("游戏胜利");
+                            role.StopMove();
+                            ctx.uiApp.Panel_GameOver_Open();
+                            game.state = GameState.GameOver;
+
+                        }
                     }
                 }
             }

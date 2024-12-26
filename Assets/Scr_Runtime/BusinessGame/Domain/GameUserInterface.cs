@@ -44,5 +44,9 @@ namespace BW {
 
         }
 
+        public static void GameOver(GameContext ctx) {
+            ctx.uiApp.Panel_GameOver_Open();
+        }
+
     }
 }

@@ -98,5 +98,10 @@ namespace BW {
             panels.TryGetValue("Panel_StartGame", out GameObject panel);
             return panel;
         }
+
+        public GameObject Panel_GetGameOver() {
+            panels.TryGetValue("Panel_GameOver", out GameObject panel);
+            return panel;
+        }
     }
 }

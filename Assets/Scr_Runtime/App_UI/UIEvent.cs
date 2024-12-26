@@ -51,4 +51,25 @@ public class UIEvent {
     }
 
     #endregion
+
+    #region Panel_GameOver
+
+    public Action OnGameOver_AgainGameHandler;
+
+    public void Panel_GameOver_AgainGameClick() {
+        if (OnGameOver_AgainGameHandler != null) {
+            OnGameOver_AgainGameHandler.Invoke();
+        }
+    }
+
+    public Action OnGameOver_QuitGameHandler;
+
+    public void Panel_GameOver_QuitGameClick() {
+        if (OnGameOver_QuitGameHandler != null) {
+            OnGameOver_QuitGameHandler.Invoke();
+        }
+    }
+
+
+    #endregion
 }

@@ -121,4 +121,39 @@ public class UIApp {
 
     #endregion
 
+    #region  Panel_GameOver
+
+    public void Panel_GameOver_Open() {
+        Panel_GameOver panel = ctx.Panel_GameOver;
+
+        if (panel == null) {
+            GameObject go = ctx.assetsCore.Panel_GetGameOver();
+            if (!go) {
+                Debug.LogError("Panel_GameOver not found");
+                return;
+            }
+
+            panel = GameObject.Instantiate(go, ctx.canvas.transform).GetComponent<Panel_GameOver>();
+            panel.Ctor();
+            panel.OnAgainGameHandler = () => {
+                ctx.uiEvent.Panel_GameOver_AgainGameClick();
+            };
+            panel.OnQuitGameHandler = () => {
+                ctx.uiEvent.Panel_GameOver_QuitGameClick();
+            };
+        }
+
+        ctx.Panel_GameOver = panel;
+    }
+
+    public void Panel_GameOver_Close() {
+        Panel_GameOver panel = ctx.Panel_GameOver;
+        if (panel == null) {
+            return;
+        }
+        panel.TearDown();
+    }
+
+    #endregion
+
 }
