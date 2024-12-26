@@ -18,7 +18,7 @@ namespace BW {
         }
 
         // TODO: 重构 写在System里面
-        public static void ClearAllGameDate(GameContext ctx) {
+        public static void ClearAllPreviousStageData(GameContext ctx) {
             var game = ctx.gameEntity;
 
             RoleDomain.ClearAll(ctx);
@@ -30,6 +30,22 @@ namespace BW {
 
             // ui 
             ctx.uiApp.Panel_Restart_Close();
+
+        }
+
+        public static void ClearAllGameData(GameContext ctx) {
+            var game = ctx.gameEntity;
+            RoleDomain.ClearAll(ctx);
+            FlagDomain.ClearAll(ctx);
+            MapDomain.ClearAll(ctx);
+
+            // audio
+            AudioDoamin.ClearAll(ctx);
+
+            // ui 
+            ctx.uiApp.Panel_Restart_Close();
+
+            game.ClearAllData();
 
         }
 

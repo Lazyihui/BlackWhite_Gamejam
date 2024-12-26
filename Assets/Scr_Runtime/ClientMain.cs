@@ -61,7 +61,7 @@ namespace BW {
             events.OnNextStage_EnterNextStageHandle += () => {
                 ctx.uiApp.Panel_NextStage_Close();
 
-                GameUserInterface.ClearAllGameDate(ctx);
+                GameUserInterface.ClearAllPreviousStageData(ctx);
                 ctx.gameEntity.stageCurID++;
                 Game_Business.Enter(ctx);
             };
@@ -69,7 +69,7 @@ namespace BW {
             events.OnNextStage_ReStartGameHandle += () => {
                 ctx.uiApp.Panel_NextStage_Close();
 
-                GameUserInterface.ClearAllGameDate(ctx);
+                GameUserInterface.ClearAllPreviousStageData(ctx);
                 Game_Business.Enter(ctx);
 
             };
@@ -79,7 +79,7 @@ namespace BW {
             events.On_StartGame_StartGameHandler += () => {
                 ctx.uiApp.Panel_StartGame_Close();
 
-                GameUserInterface.ClearAllGameDate(ctx);
+                GameUserInterface.ClearAllPreviousStageData(ctx);
                 Game_Business.Enter(ctx);
             };
 
@@ -87,10 +87,15 @@ namespace BW {
 
             events.OnGameOver_AgainGameHandler += () => {
 
+                ctx.uiApp.Panel_GameOver_Close();
+                GameUserInterface.ClearAllGameData(ctx);
+                Game_Business.Enter(ctx);
+
             };
 
             events.OnGameOver_QuitGameHandler += () => {
                 // 退出程序
+                Application.Quit();
             };
 
 

@@ -32,7 +32,22 @@ namespace BW {
             audioIDRecord = 0;
         }
 
-      
+
+        public void ClearAllData() {
+            restFixTime = 0;
+
+            state = GameState.Login;
+            stageCurID = 1;
+
+            ownerID = 0;
+            curMapID = 0;
+
+            // TODO:
+            flagIDRecord = 1;
+            audioIDRecord = 0;
+        }
+
+
 
     }
 }
