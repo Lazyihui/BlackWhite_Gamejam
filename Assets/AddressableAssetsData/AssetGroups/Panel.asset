@@ -16,7 +16,25 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: d3f5b123d3f188546870b3e8cebec507
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 86ffd0247082ec44b83cc9936604b5ab
+    m_Address: Panel_Restart
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Panel
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f5d93cc25ec078a4a98beda3519a3f63
+    m_Address: Panel_NextStage
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Panel
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7762cef05ab4204438f1c5e2e1de3fd3
+    m_Address: Panel_StartGame
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Panel
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: d4c3f258e9fbd214586f555e4b1682da, type: 2}
   m_SchemaSet:

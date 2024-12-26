@@ -20,6 +20,9 @@ namespace BW {
             RoleEntity role = RoleDomain.Spawn(ctx, 1);
             Vector2 pos = new Vector2(7.75f, -3.9f);
             FlagDomain.Spawn(ctx, 1, pos);
+
+            ctx.audioBG = AudioDoamin.Spawn(ctx, 0, true);
+            ctx.audioJump = AudioDoamin.Spawn(ctx, 1, false);
         }
 
         public static void Tick(GameContext ctx, float dt) {

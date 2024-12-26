@@ -24,7 +24,7 @@ namespace BW {
             FlagEntity entity = GameObject.Instantiate(prefab).GetComponent<FlagEntity>();
 
             entity.Ctor();
-            entity.idSig = ctx.gameEntity.flagIDRecord;
+            entity.idSig = ctx.gameEntity.flagIDRecord++;
 
             entity.SetPos(pos);
 
@@ -43,6 +43,20 @@ namespace BW {
             ctx.gameEntity.curMapID = map.stageID;
 
             return map;
+        }
+
+        public static AudioEntity Audio_Create(GameContext ctx, int typeID, bool loop) {
+            GameObject prefab = ctx.assetsCore.Entity_GetAudio();
+            if (prefab == null) {
+                Debug.LogError("Audio prefab is null");
+            }
+            AudioEntity entity = GameObject.Instantiate(prefab).GetComponent<AudioEntity>();
+            entity.Ctor();
+            entity.idSig = ctx.gameEntity.audioIDRecord++;
+            entity.typeID = typeID;
+            entity.Init(loop);
+
+            return entity;
         }
     }
 }

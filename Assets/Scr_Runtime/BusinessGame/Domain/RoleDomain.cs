@@ -34,6 +34,7 @@ namespace BW {
                 return;
             }
             role.Jump();
+            AudioDoamin.PlayAudio(ctx, ctx.audioJump);
         }
 
 

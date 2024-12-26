@@ -13,6 +13,11 @@ namespace BW {
         public MapRepository mapRepository;
         public FlagRepository flagRepository;
 
+        // audio
+        public AudioEntity audioBG;
+        public AudioEntity audioJump;
+
+
         public GameContext() {
             gameEntity = new GameEntity();
 

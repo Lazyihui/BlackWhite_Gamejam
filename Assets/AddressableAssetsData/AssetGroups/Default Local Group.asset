@@ -17,18 +17,6 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 6bf3c8668a5f760479cfb18cb91bb04d
   m_SerializeEntries:
-  - m_GUID: 65d36adb24cf019499799a9193a22931
-    m_Address: Entity_Role
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Entity
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b3e669ef1556d6d469988b2c401a0cd4
-    m_Address: Entity_Flag
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Entity
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9aa7f3ba5cec25c49b7ebf8b78767844
     m_Address: Entity_Map_Variant_1
     m_ReadOnly: 0
@@ -47,18 +35,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - Entity
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 86ffd0247082ec44b83cc9936604b5ab
-    m_Address: Panel_Restart
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Panel
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f5d93cc25ec078a4a98beda3519a3f63
-    m_Address: Panel_NextStage
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Panel
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b2a6bdb9729a1c0499c3cc07de47636c
     m_Address: Entity_Map_Variant_4
     m_ReadOnly: 0
@@ -76,12 +52,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - Entity
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7762cef05ab4204438f1c5e2e1de3fd3
-    m_Address: Panel_StartGame
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Panel
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: d4c3f258e9fbd214586f555e4b1682da, type: 2}

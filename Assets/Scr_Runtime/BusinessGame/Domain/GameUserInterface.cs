@@ -25,9 +25,12 @@ namespace BW {
             FlagDomain.ClearAll(ctx);
             MapDomain.ClearAll(ctx);
 
+            // audio
+            AudioDoamin.ClearAll(ctx);
 
             // ui 
             ctx.uiApp.Panel_Restart_Close();
+
         }
 
         public static void Restart(GameContext ctx) {

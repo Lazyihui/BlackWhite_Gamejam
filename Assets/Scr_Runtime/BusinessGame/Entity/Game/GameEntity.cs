@@ -13,6 +13,7 @@ namespace BW {
         public int curMapID;
 
         public int flagIDRecord;
+        public int audioIDRecord;
 
 
         public GameEntity() {
@@ -27,6 +28,7 @@ namespace BW {
 
             // TODO:
             flagIDRecord = 1;
+            audioIDRecord = 0;
         }
 
       

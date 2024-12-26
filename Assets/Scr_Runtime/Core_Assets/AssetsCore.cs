@@ -78,6 +78,10 @@ namespace BW {
             entities.TryGetValue("Entity_Map_Variant_" + stageID, out GameObject map);
             return map;
         }
+        public GameObject Entity_GetAudio() {
+            entities.TryGetValue("Entity_Audio", out GameObject audio);
+            return audio;
+        }
 
         // Panel
         public GameObject Panel_GetRestart() {
