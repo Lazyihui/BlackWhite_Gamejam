@@ -11,6 +11,7 @@ public class UIContext {
     public Panel_StartGame panel_StartGame;
     public Panel_GameOver panel_GameOver;
     public Panel_GamePause panel_GamePause;
+    public Panel_SelectStage panel_SelectStage;
 
     //core
     public AssetsCore assetsCore;

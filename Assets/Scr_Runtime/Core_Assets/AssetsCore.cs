@@ -108,5 +108,10 @@ namespace BW {
             panels.TryGetValue("Panel_Pause", out GameObject panel);
             return panel;
         }
+
+        public GameObject Panel_GetSelectStage(){
+            panels.TryGetValue("Panel_SelectStage", out GameObject panel);
+            return panel;
+        }
     }
 }

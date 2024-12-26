@@ -22,6 +22,7 @@ public class UIEvent {
     }
 
 
+
     #endregion
 
     #region  Panel_NextStage
@@ -50,6 +51,15 @@ public class UIEvent {
             On_StartGame_StartGameHandler.Invoke();
         }
     }
+
+    public Action OnStartGame_SelectStageHandle;
+
+    public void Panel_StartGame_SelectStageClick() {
+        if (OnStartGame_SelectStageHandle != null) {
+            OnStartGame_SelectStageHandle.Invoke();
+        }
+    }
+
 
     #endregion
 
@@ -92,6 +102,49 @@ public class UIEvent {
         }
     }
 
+
+    #endregion
+
+    #region Panel_SelectStage
+    public Action<int> OnSelectStage1_SelectStageHandle;
+
+    public void Panel_SelectStage1_SelectStageClick(int stage) {
+        if (OnSelectStage1_SelectStageHandle != null) {
+            OnSelectStage1_SelectStageHandle.Invoke(stage);
+        }
+    }
+
+    public Action<int> OnSelectStage2_SelectStageHandle;
+
+    public void Panel_SelectStage2_SelectStageClick(int stage) {
+        if (OnSelectStage2_SelectStageHandle != null) {
+            OnSelectStage2_SelectStageHandle.Invoke(stage);
+        }
+    }
+
+    public Action<int> OnSelectStage3_SelectStageHandle;
+
+    public void Panel_SelectStage3_SelectStageClick(int stage) {
+        if (OnSelectStage3_SelectStageHandle != null) {
+            OnSelectStage3_SelectStageHandle.Invoke(stage);
+        }
+    }
+
+    public Action<int> OnSelectStage4_SelectStageHandle;
+
+    public void Panel_SelectStage4_SelectStageClick(int stage) {
+        if (OnSelectStage4_SelectStageHandle != null) {
+            OnSelectStage4_SelectStageHandle.Invoke(stage);
+        }
+    }
+
+    public Action<int> OnSelectStage5_SelectStageHandle;
+
+    public void Panel_SelectStage5_SelectStageClick(int stage) {
+        if (OnSelectStage5_SelectStageHandle != null) {
+            OnSelectStage5_SelectStageHandle.Invoke(stage);
+        }
+    }
 
     #endregion
 }

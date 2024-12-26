@@ -619,3 +619,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   btn_StartGame: {fileID: 6641283335141208212}
+  btn_SelectStage: {fileID: 8758039775853628727}

@@ -83,6 +83,12 @@ namespace BW {
                 Game_Business.Enter(ctx);
             };
 
+            events.OnStartGame_SelectStageHandle += () => {
+                ctx.uiApp.Panel_StartGame_Close();
+
+                ctx.uiApp.Panel_SelectStage_Open();
+            };
+
             // Panel_GameOver
 
             events.OnGameOver_AgainGameHandler += () => {
@@ -109,6 +115,35 @@ namespace BW {
                 Application.Quit();
                 Debug.Log("QuitGame");
             };
+
+            // panel_selectStage
+
+            events.OnSelectStage1_SelectStageHandle += (int stageID) => {
+                ctx.uiApp.Panel_SelectStage_Close();
+                Debug.Log(stageID);
+            };
+
+
+            events.OnSelectStage2_SelectStageHandle += (int stageID) => {
+                ctx.uiApp.Panel_SelectStage_Close();
+                Debug.Log(stageID);
+            };
+
+            events.OnSelectStage3_SelectStageHandle += (int stageID) => {
+                ctx.uiApp.Panel_SelectStage_Close();
+                Debug.Log(stageID);
+            };
+
+            events.OnSelectStage4_SelectStageHandle += (int stageID) => {
+                ctx.uiApp.Panel_SelectStage_Close();
+                Debug.Log(stageID);
+            };
+
+            events.OnSelectStage5_SelectStageHandle += (int stageID) => {
+                ctx.uiApp.Panel_SelectStage_Close();
+                Debug.Log(stageID);
+            };
+
 
 
         }

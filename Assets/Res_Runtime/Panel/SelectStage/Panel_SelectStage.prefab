@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 893456062543726712}
   - component: {fileID: 3483544813640690870}
   - component: {fileID: 1576966304716152307}
+  - component: {fileID: -1853203093077117860}
   m_Layer: 5
   m_Name: Panel_SelectStage
   m_TagString: Untagged
@@ -76,6 +77,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &-1853203093077117860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 897424264649926246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39feb5f85012af3499287d2838a8cf64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btn_1: {fileID: 8348531055591510611}
+  btn_2: {fileID: 7618248244300392721}
+  btn_3: {fileID: 2691832875456279958}
+  btn_4: {fileID: 3175394655863066052}
+  btn_5: {fileID: 2547592757423291785}
 --- !u!1 &1354383562522227915
 GameObject:
   m_ObjectHideFlags: 0

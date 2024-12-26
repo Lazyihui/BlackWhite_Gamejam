@@ -38,6 +38,7 @@ public class UIApp {
             panel.Ctor();
             panel.OnClickRestartHandle = () => {
                 ctx.uiEvent.Panel_Restart_RestartClick();
+
             };
         }
 
@@ -105,6 +106,9 @@ public class UIApp {
             panel.Ctor();
             panel.OnStartGameHandler = () => {
                 ctx.uiEvent.Panel_StartGame_StartGameClick();
+            };
+            panel.SelectStageHandler = () => {
+                ctx.uiEvent.Panel_StartGame_SelectStageClick();
             };
         }
 
@@ -190,6 +194,55 @@ public class UIApp {
         }
         panel.TearDown();
     }
+
+    #endregion
+
+    #region  Panel_SelectStage
+    public void Panel_SelectStage_Open() {
+        Panel_SelectStage panel = ctx.panel_SelectStage;
+
+        if (panel == null) {
+            GameObject go = ctx.assetsCore.Panel_GetSelectStage();
+            if (!go) {
+                Debug.LogError("Panel_SelectStage not found");
+                return;
+            }
+
+            panel = GameObject.Instantiate(go, ctx.canvas.transform).GetComponent<Panel_SelectStage>();
+            panel.Ctor();
+            panel.On1GameHandler = (int stage) => {
+                ctx.uiEvent.Panel_SelectStage1_SelectStageClick(stage);
+            };
+
+            panel.On2GameHandler = (int stage) => {
+                ctx.uiEvent.Panel_SelectStage2_SelectStageClick(stage);
+            };
+
+            panel.On3GameHandler = (int stage) => {
+                ctx.uiEvent.Panel_SelectStage3_SelectStageClick(stage);
+            };
+
+            panel.On4GameHandler = (int stage) => {
+                ctx.uiEvent.Panel_SelectStage4_SelectStageClick(stage);
+            };
+
+            panel.On5GameHandler = (int stage) => {
+                ctx.uiEvent.Panel_SelectStage5_SelectStageClick(stage);
+            };
+
+        }
+
+        ctx.panel_SelectStage = panel;
+    }
+
+    public void Panel_SelectStage_Close() {
+        Panel_SelectStage panel = ctx.panel_SelectStage;
+        if (panel == null) {
+            return;
+        }
+        panel.TearDown();
+    }
+
 
     #endregion
 }
