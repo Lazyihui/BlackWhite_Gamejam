@@ -98,6 +98,18 @@ namespace BW {
                 Application.Quit();
             };
 
+            // panel_GamePause
+
+            events.OnGamePause_ContinueGameHandler += () => {
+                ctx.uiApp.Panel_GamePause_Close();
+                Debug.Log("ContinueGame");
+            };
+
+            events.OnGamePause_QuitGameHandler += () => {
+                Application.Quit();
+                Debug.Log("QuitGame");
+            };
+
 
         }
 

@@ -9,7 +9,8 @@ public class UIContext {
     public Panel_Restart panel_Restart;
     public Panel_NextStage panel_NextStage;
     public Panel_StartGame panel_StartGame;
-    public Panel_GameOver Panel_GameOver;
+    public Panel_GameOver panel_GameOver;
+    public Panel_GamePause panel_GamePause;
 
     //core
     public AssetsCore assetsCore;

@@ -125,7 +125,7 @@ public class UIApp {
     #region  Panel_GameOver
 
     public void Panel_GameOver_Open() {
-        Panel_GameOver panel = ctx.Panel_GameOver;
+        Panel_GameOver panel = ctx.panel_GameOver;
 
         if (panel == null) {
             GameObject go = ctx.assetsCore.Panel_GetGameOver();
@@ -144,11 +144,11 @@ public class UIApp {
             };
         }
 
-        ctx.Panel_GameOver = panel;
+        ctx.panel_GameOver = panel;
     }
 
     public void Panel_GameOver_Close() {
-        Panel_GameOver panel = ctx.Panel_GameOver;
+        Panel_GameOver panel = ctx.panel_GameOver;
         if (panel == null) {
             return;
         }
@@ -157,4 +157,39 @@ public class UIApp {
 
     #endregion
 
+
+    #region  Panel_GamePause
+
+    public void Panel_GamePause_Open() {
+        Panel_GamePause panel = ctx.panel_GamePause;
+
+        if (panel == null) {
+            GameObject go = ctx.assetsCore.Panel_GetGamePause();
+            if (!go) {
+                Debug.LogError("Panel_GamePause not found");
+                return;
+            }
+
+            panel = GameObject.Instantiate(go, ctx.canvas.transform).GetComponent<Panel_GamePause>();
+            panel.Ctor();
+            panel.OnContinueGameHandler = () => {
+                ctx.uiEvent.Panel_GamePause_ContinueGameClick();
+            };
+            panel.OnQuitGameHandler = () => {
+                ctx.uiEvent.Panel_GamePause_QuitGameClick();
+            };
+        }
+
+        ctx.panel_GamePause = panel;
+    }
+
+    public void Panel_GamePause_Close() {
+        Panel_GamePause panel = ctx.panel_GamePause;
+        if (panel == null) {
+            return;
+        }
+        panel.TearDown();
+    }
+
+    #endregion
 }

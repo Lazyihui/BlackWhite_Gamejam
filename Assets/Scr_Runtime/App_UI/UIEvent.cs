@@ -72,4 +72,25 @@ public class UIEvent {
 
 
     #endregion
+
+    #region Panel_GamePause
+
+    public Action OnGamePause_ContinueGameHandler;
+
+    public void Panel_GamePause_ContinueGameClick() {
+        if (OnGamePause_ContinueGameHandler != null) {
+            OnGamePause_ContinueGameHandler.Invoke();
+        }
+    }
+
+    public Action OnGamePause_QuitGameHandler;
+
+    public void Panel_GamePause_QuitGameClick() {
+        if (OnGamePause_QuitGameHandler != null) {
+            OnGamePause_QuitGameHandler.Invoke();
+        }
+    }
+
+
+    #endregion
 }

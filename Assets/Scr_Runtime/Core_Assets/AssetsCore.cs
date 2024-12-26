@@ -103,5 +103,10 @@ namespace BW {
             panels.TryGetValue("Panel_GameOver", out GameObject panel);
             return panel;
         }
+
+        public GameObject Panel_GetGamePause() {
+            panels.TryGetValue("Panel_Pause", out GameObject panel);
+            return panel;
+        }
     }
 }
