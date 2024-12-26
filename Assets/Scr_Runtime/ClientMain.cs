@@ -44,6 +44,7 @@ namespace BW {
             var events = ctx.uiApp.GetEvents();
 
             events.OnRestart_RestartHandle += () => {
+                Debug.Log("OnRestart_RestartHandle");
                 GameUserInterface.Restart(ctx);
             };
 

@@ -12,6 +12,7 @@ namespace BW {
 
         public void Ctor() {
             btnRestart.onClick.AddListener(() => {
+                Debug.Log("Panel_Restart_RestartClick");
                 if (OnClickRestartHandle != null) {
                     OnClickRestartHandle.Invoke();
                 }

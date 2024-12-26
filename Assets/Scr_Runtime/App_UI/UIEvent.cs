@@ -7,6 +7,7 @@ public class UIEvent {
 
     public void Panel_Restart_RestartClick() {
         if (OnRestart_RestartHandle != null) {
+            Debug.Log("Panel_Restart_RestartClick");
             OnRestart_RestartHandle.Invoke();
         }
     }

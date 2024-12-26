@@ -27,6 +27,8 @@ namespace BW {
 
             game.state = GameState.NextStage;
 
+            // ui 
+            ctx.uiApp.Panel_Restart_Close();
         }
 
         public static void Restart(GameContext ctx) {
