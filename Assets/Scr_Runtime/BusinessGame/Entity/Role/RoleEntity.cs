@@ -58,6 +58,12 @@ namespace BW {
             }
         }
 
+        public void StopMove() {
+            var velo = rb.velocity;
+            velo.x = 0;
+            rb.velocity = velo;
+        }
+
         public void Jump() {
             if (!AllowJump()) {
                 return;

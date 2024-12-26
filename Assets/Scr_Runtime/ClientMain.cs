@@ -42,6 +42,7 @@ namespace BW {
 
         void Binding() {
             var events = ctx.uiApp.GetEvents();
+            var game = ctx.gameEntity;
 
             events.OnRestart_RestartHandle += () => {
                 Debug.Log("OnRestart_RestartHandle");
@@ -56,13 +57,18 @@ namespace BW {
 
             events.OnNextStage_EnterNextStageHandle += () => {
                 ctx.uiApp.Panel_NextStage_Close();
+
+                GameUserInterface.ClearAllGameDate(ctx);
                 ctx.gameEntity.stageCurID++;
                 Game_Business.Enter(ctx);
             };
 
             events.OnNextStage_ReStartGameHandle += () => {
                 ctx.uiApp.Panel_NextStage_Close();
+
+                GameUserInterface.ClearAllGameDate(ctx);
                 Game_Business.Enter(ctx);
+
             };
         }
 

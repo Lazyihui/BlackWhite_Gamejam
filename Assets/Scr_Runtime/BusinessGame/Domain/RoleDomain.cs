@@ -118,6 +118,7 @@ namespace BW {
         // TODO:感觉要放到GameDomain里
         public static void TouchFlag(GameContext ctx, RoleEntity role) {
             Vector2 rolePos = role.GetPos();
+            var game = ctx.gameEntity;
 
             int len = ctx.flagRepository.TakeAll(out FlagEntity[] flags);
             for (int i = 0; i < len; i += 1) {
@@ -129,9 +130,9 @@ namespace BW {
                     float dis = Vector2.Distance(rolePos, flagPos);
                     if (dis < 0.5f) {
                         Debug.Log("游戏胜利");
+                        role.StopMove();
                         ctx.uiApp.Panel_NextStage_Open();
-
-                        GameUserInterface.ClearAllGameDate(ctx);
+                        game.state = GameState.NextStage;
                     }
                 }
             }

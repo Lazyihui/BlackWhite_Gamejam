@@ -25,7 +25,6 @@ namespace BW {
             FlagDomain.ClearAll(ctx);
             MapDomain.ClearAll(ctx);
 
-            game.state = GameState.NextStage;
 
             // ui 
             ctx.uiApp.Panel_Restart_Close();

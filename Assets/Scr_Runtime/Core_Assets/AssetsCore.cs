@@ -76,7 +76,6 @@ namespace BW {
 
         public GameObject Entity_GetMap(int stageID) {
             entities.TryGetValue("Entity_Map_Variant_" + stageID, out GameObject map);
-            Debug.Log("Entity_Map_Variant_" + stageID);
             return map;
         }
 
