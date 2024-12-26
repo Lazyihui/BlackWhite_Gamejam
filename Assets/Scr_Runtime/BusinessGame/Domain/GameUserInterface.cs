@@ -64,5 +64,14 @@ namespace BW {
             ctx.uiApp.Panel_GameOver_Open();
         }
 
+        public static void GamePause(GameContext ctx) {
+            var input = ctx.inputCore;
+
+            if (input.isKeyDownEsc) {
+                ctx.uiApp.Panel_GamePause_Open();
+                input.isKeyDownEsc = false;
+            }
+        }
+
     }
 }

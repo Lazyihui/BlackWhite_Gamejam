@@ -11,6 +11,8 @@ namespace BW {
 
         public bool isKeyDownE;
 
+        public bool isKeyDownEsc;
+
         public InputCore() {
             input_Role = new InputController_Player();
             input_Role.Enable();
@@ -64,6 +66,16 @@ namespace BW {
                     isKeyDownE = false;
                 }
 
+            }
+
+
+            //PressEsc
+            {
+                if (World.PressEsc.triggered) {
+                    isKeyDownEsc = true;
+                } else {
+                    isKeyDownEsc = false;
+                }
             }
 
         }

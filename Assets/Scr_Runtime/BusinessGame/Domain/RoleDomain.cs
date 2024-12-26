@@ -186,6 +186,13 @@ namespace BW {
 
         }
 
-
+        public static void GamePause(GameContext ctx, RoleEntity role)
+        {
+            var input = ctx.inputCore;
+            if (input.isKeyDownEsc) {
+                Debug.Log("isKeyDownE");
+                ctx.uiApp.Panel_GamePause_Open();
+            }
+        }
     }
 }

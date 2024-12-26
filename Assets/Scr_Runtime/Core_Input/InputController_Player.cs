@@ -80,6 +80,15 @@ public partial class @InputController_Player: IInputActionCollection2, IDisposab
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""PressEsc"",
+                    ""type"": ""Button"",
+                    ""id"": ""afb36752-6d59-4505-96c9-c5c190184a7e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -192,6 +201,17 @@ public partial class @InputController_Player: IInputActionCollection2, IDisposab
                     ""action"": ""PressE"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""01e93d3e-7bdb-47af-841c-30e4e75f65c5"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PressEsc"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -206,6 +226,7 @@ public partial class @InputController_Player: IInputActionCollection2, IDisposab
         m_World_MoveRight = m_World.FindAction("MoveRight", throwIfNotFound: true);
         m_World_Jump = m_World.FindAction("Jump", throwIfNotFound: true);
         m_World_PressE = m_World.FindAction("PressE", throwIfNotFound: true);
+        m_World_PressEsc = m_World.FindAction("PressEsc", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -273,6 +294,7 @@ public partial class @InputController_Player: IInputActionCollection2, IDisposab
     private readonly InputAction m_World_MoveRight;
     private readonly InputAction m_World_Jump;
     private readonly InputAction m_World_PressE;
+    private readonly InputAction m_World_PressEsc;
     public struct WorldActions
     {
         private @InputController_Player m_Wrapper;
@@ -283,6 +305,7 @@ public partial class @InputController_Player: IInputActionCollection2, IDisposab
         public InputAction @MoveRight => m_Wrapper.m_World_MoveRight;
         public InputAction @Jump => m_Wrapper.m_World_Jump;
         public InputAction @PressE => m_Wrapper.m_World_PressE;
+        public InputAction @PressEsc => m_Wrapper.m_World_PressEsc;
         public InputActionMap Get() { return m_Wrapper.m_World; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -310,6 +333,9 @@ public partial class @InputController_Player: IInputActionCollection2, IDisposab
             @PressE.started += instance.OnPressE;
             @PressE.performed += instance.OnPressE;
             @PressE.canceled += instance.OnPressE;
+            @PressEsc.started += instance.OnPressEsc;
+            @PressEsc.performed += instance.OnPressEsc;
+            @PressEsc.canceled += instance.OnPressEsc;
         }
 
         private void UnregisterCallbacks(IWorldActions instance)
@@ -332,6 +358,9 @@ public partial class @InputController_Player: IInputActionCollection2, IDisposab
             @PressE.started -= instance.OnPressE;
             @PressE.performed -= instance.OnPressE;
             @PressE.canceled -= instance.OnPressE;
+            @PressEsc.started -= instance.OnPressEsc;
+            @PressEsc.performed -= instance.OnPressEsc;
+            @PressEsc.canceled -= instance.OnPressEsc;
         }
 
         public void RemoveCallbacks(IWorldActions instance)
@@ -357,5 +386,6 @@ public partial class @InputController_Player: IInputActionCollection2, IDisposab
         void OnMoveRight(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnPressE(InputAction.CallbackContext context);
+        void OnPressEsc(InputAction.CallbackContext context);
     }
 }

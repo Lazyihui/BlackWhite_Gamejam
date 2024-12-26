@@ -57,6 +57,7 @@ namespace BW {
             RoleEntity role = ctx.Get_Role();
 
             GameUserInterface.ChangeMapRole(ctx, map, role);
+            GameUserInterface.GamePause(ctx);
 
         }
 
