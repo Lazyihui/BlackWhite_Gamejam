@@ -1,8 +1,10 @@
 using System;
 using UnityEngine;
 
-namespace BW {
-    public class RoleEntity : MonoBehaviour {
+namespace BW
+{
+    public class RoleEntity : MonoBehaviour
+    {
         [SerializeField] Rigidbody2D rb;
         [SerializeField] GameObject roleWhite;
         [SerializeField] GameObject roleBlack;
@@ -18,32 +20,38 @@ namespace BW {
         // 上一次的面向
         public Vector2 lastDir;
 
-        public void Ctor() {
+        public void Ctor()
+        {
             moveSpeed = 5;
             allowJumpTimes = 0;
             // 决定跳跃高度
             jumpForce = 5;
         }
 
-        public Vector2 GetPos() {
+        public Vector2 GetPos()
+        {
             return transform.position;
         }
 
-        public Vector2 Velocity() {
+        public Vector2 Velocity()
+        {
             return rb.velocity;
         }
 
-        public void SetPos(Vector2 pos) {
+        public void SetPos(Vector2 pos)
+        {
             transform.position = pos;
         }
 
         //TODO:觉得要用全局的变量来同时控制map和role的状态
-        public void Toggle() {
+        public void Toggle()
+        {
             roleBlack.SetActive(!roleBlack.activeSelf);
             roleWhite.SetActive(!roleWhite.activeSelf);
         }
 
-        public void Move(Vector2 dir) {
+        public void Move(Vector2 dir)
+        {
             var velo = rb.velocity;
             float veloy = velo.y;
             velo.x = dir.x * moveSpeed;
@@ -51,47 +59,56 @@ namespace BW {
             rb.velocity = velo;
 
             // 面向
-            if (dir.x > 0) {
+            if (dir.x > 0)
+            {
                 transform.localScale = new Vector3(1, 1, 1);
-            } else if (dir.x < 0) {
+            }
+            else if (dir.x < 0)
+            {
                 transform.localScale = new Vector3(-1, 1, 1);
             }
         }
 
-        public void StopMove() {
+        public void StopMove()
+        {
             var velo = rb.velocity;
             velo.x = 0;
             rb.velocity = velo;
         }
 
-        public void Jump() {
-            if (!AllowJump()) {
-                return;
-            }
+        public void Jump()
+        {
+
             Vector2 oldVelo = rb.velocity;
             oldVelo.y = jumpForce;
             rb.velocity = oldVelo;
             allowJumpTimes--;
         }
 
-        public void EnterGround() {
+        public void EnterGround()
+        {
             allowJumpTimes = 1;
         }
 
-        bool AllowJump() {
+        public bool AllowJump()
+        {
             return allowJumpTimes > 0;
         }
 
-        public void FleeGround() {
-            if (this.lastDir.x == 1) {
+        public void FleeGround()
+        {
+            if (this.lastDir.x == 1)
+            {
                 this.transform.position += new Vector3(-1f, 0, 0);
             }
-            if (this.lastDir.x == -1) {
+            if (this.lastDir.x == -1)
+            {
                 this.transform.position += new Vector3(1f, 0, 0);
             }
 
         }
-        public void TearDown() {
+        public void TearDown()
+        {
             Destroy(gameObject);
         }
     }

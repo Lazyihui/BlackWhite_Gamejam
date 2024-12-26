@@ -33,6 +33,9 @@ namespace BW {
             if (!input.isJumpKeyDown) {
                 return;
             }
+             if (!role.AllowJump()) {
+                return;
+            }
             role.Jump();
             AudioDoamin.PlayAudio(ctx, ctx.audioJump);
         }
