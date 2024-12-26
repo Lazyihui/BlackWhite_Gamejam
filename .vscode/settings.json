@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "BlackWhite2D.sln"
+    "dotnet.defaultSolution": "BlackWhite_Gamejam.sln"
 }
