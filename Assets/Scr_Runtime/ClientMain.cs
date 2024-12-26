@@ -8,6 +8,8 @@ namespace BW {
 
     public class Main : MonoBehaviour {
 
+        [SerializeField] int maxStageID;
+
         GameContext ctx;
 
         bool isTearDown = false;
@@ -22,6 +24,7 @@ namespace BW {
 
             Canvas canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
             ctx.InJect(canvas);
+            ctx.gameEntity.maxStageID = maxStageID;
 
             // Binding
             Binding();

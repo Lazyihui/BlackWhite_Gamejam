@@ -8,6 +8,7 @@ namespace BW {
         // Game
         public GameState state;
         public int stageCurID;
+        public int maxStageID;
 
         public int ownerID;
         public int curMapID;
