@@ -6,6 +6,7 @@ namespace BW {
         public GameEntity gameEntity;
         // Core
         public AssetsCore assetsCore;
+        public TemplateCore templateCore;
         public InputCore inputCore;
         public UIApp uiApp;
         // ropository
@@ -23,6 +24,7 @@ namespace BW {
 
             // Core
             assetsCore = new AssetsCore();
+            templateCore = new TemplateCore();
             inputCore = new InputCore();
             uiApp = new UIApp();
 

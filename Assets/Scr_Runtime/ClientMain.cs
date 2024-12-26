@@ -29,6 +29,7 @@ namespace BW {
             Action action = async () => {
 
                 await ctx.assetsCore.LoadAll();
+                await ctx.templateCore.LoadAll();
 
                 isInit = true;
 
@@ -113,6 +114,7 @@ namespace BW {
             }
             isTearDown = true;
             ctx.assetsCore.UnLoadAll();
+            ctx.templateCore.UnLoadAll();
 
         }
 

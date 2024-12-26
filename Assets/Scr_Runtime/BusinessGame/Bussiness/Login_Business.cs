@@ -16,8 +16,10 @@ public static class Login_Business {
         // role
         RoleEntity role = RoleDomain.Spawn(ctx, 1);
 
-        ctx.audioBG = AudioDoamin.Spawn(ctx, 0, true);
-        ctx.audioJump = AudioDoamin.Spawn(ctx, 1, false);
+        ctx.audioBG = AudioDoamin.Spawn(ctx, 0);
+        AudioDoamin.PlayAudio(ctx, ctx.audioBG);
+
+        ctx.audioJump = AudioDoamin.Spawn(ctx, 1);
 
     }
 

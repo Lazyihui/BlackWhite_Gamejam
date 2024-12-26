@@ -6,29 +6,16 @@ namespace BW {
 
         [SerializeField] AudioSource audioSource;
 
-        [SerializeField] AudioClip clipJump;
-
-        [SerializeField] AudioClip clipBG;
-
         public int idSig;
 
         public int typeID;
 
-        public void Ctor() {
-            if (typeID == 1) {
-                audioSource.clip = clipJump;
-            } else if (typeID == 0) {
-                audioSource.clip = clipBG;
-            }
-        }
-        public void Init(bool loop) {
-            audioSource.loop = loop;
-            if (loop) {
-                audioSource.Play();
-            }
+        public void SetClip(AudioClip clip, bool isLoop) {
+            audioSource.clip = clip;
+            audioSource.loop = isLoop;
         }
 
-        public void PlayAudio() {
+        public void Play() {
             audioSource.Play();
         }
 

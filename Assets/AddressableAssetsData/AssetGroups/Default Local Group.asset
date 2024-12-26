@@ -53,6 +53,18 @@ MonoBehaviour:
     m_SerializedLabels:
     - Entity
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 16213f8decbd9b745a000efcadb3f620
+    m_Address: AudioTM_Bg
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AudioTM
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5d7320c596c239640b7350faca54f6e1
+    m_Address: AudioTM_Jump
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AudioTM
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: d4c3f258e9fbd214586f555e4b1682da, type: 2}
   m_SchemaSet:

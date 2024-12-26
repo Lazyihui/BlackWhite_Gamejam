@@ -3,9 +3,9 @@ using UnityEngine;
 
 namespace BW {
     public static class AudioDoamin {
-        public static AudioEntity Spawn(GameContext ctx, int typeID, bool loop) {
+        public static AudioEntity Spawn(GameContext ctx, int typeID) {
 
-            AudioEntity entity = GameFactory.Audio_Create(ctx, typeID, loop);
+            AudioEntity entity = GameFactory.Audio_Create(ctx, typeID);
             entity.typeID = typeID;
             return entity;
         }
@@ -26,7 +26,7 @@ namespace BW {
         }
 
         public static void PlayAudio(GameContext ctx, AudioEntity entity) {
-            entity.PlayAudio();
+            entity.Play();
         }
     }
 }

@@ -45,16 +45,19 @@ namespace BW {
             return map;
         }
 
-        public static AudioEntity Audio_Create(GameContext ctx, int typeID, bool loop) {
-            GameObject prefab = ctx.assetsCore.Entity_GetAudio();
-            if (prefab == null) {
-                Debug.LogError("Audio prefab is null");
+        public static AudioEntity Audio_Create(GameContext ctx, int typeID) {
+
+            bool has = ctx.templateCore.audios.TryGetValue(typeID, out AudioTM tm);
+            if (!has) {
+                Debug.LogError("AudioTM not found");
             }
+            GameObject prefab = ctx.assetsCore.Entity_GetAudio();
             AudioEntity entity = GameObject.Instantiate(prefab).GetComponent<AudioEntity>();
-            entity.Ctor();
+
             entity.idSig = ctx.gameEntity.audioIDRecord++;
             entity.typeID = typeID;
-            entity.Init(loop);
+
+            entity.SetClip(tm.clip, tm.isLoop);
 
             return entity;
         }

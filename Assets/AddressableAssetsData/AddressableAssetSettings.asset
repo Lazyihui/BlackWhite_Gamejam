@@ -91,6 +91,7 @@ MonoBehaviour:
     - default
     - Entity
     - Panel
+    - AudioTM
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 67e366cdc9c329543a4537e556c419e9, type: 2}
