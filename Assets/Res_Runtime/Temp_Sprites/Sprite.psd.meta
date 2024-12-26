@@ -261,6 +261,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: button
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 163
+        width: 200
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb4e1c0a960f62b418e70aad264efab3
+      internalID: -556136939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NextBG
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 290
+        width: 1000
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76b546f8892a60a47a33f7baf9bff971
+      internalID: 1366868991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -272,12 +314,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      NextBG: 1366868991
       Sprite_0: 12323174
       Sprite_1: -1694170875
       Sprite_2: -1796906331
       Sprite_3: -1243043621
       Sprite_4: 1657305539
       Sprite_5: 1076979292
+      button: -556136939
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
