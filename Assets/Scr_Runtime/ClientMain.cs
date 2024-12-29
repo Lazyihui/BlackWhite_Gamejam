@@ -21,8 +21,6 @@ namespace BW {
 
             // Init
             ctx = new GameContext();
-            // Canvas screenCanvas = GameObject.Find("ScreenCanvas").GetComponent<Canvas>();
-            // Canvas worldCanvas = GameObject.Find("WorldCanvas").GetComponent<Canvas>();
 
             Canvas canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
             ctx.InJect(canvas);

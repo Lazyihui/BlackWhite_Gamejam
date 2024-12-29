@@ -89,6 +89,15 @@ public partial class @InputController_Player: IInputActionCollection2, IDisposab
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""PressR"",
+                    ""type"": ""Button"",
+                    ""id"": ""4d2086c2-d5de-42ec-b7d8-df034dfe48ef"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -140,6 +149,17 @@ public partial class @InputController_Player: IInputActionCollection2, IDisposab
                     ""name"": """",
                     ""id"": ""ad06555f-4c1f-4006-9e71-8ca5f1ba76eb"",
                     ""path"": ""<Keyboard>/k"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6d034077-26c8-4cc7-8ad8-619f292e57f9"",
+                    ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -204,12 +224,34 @@ public partial class @InputController_Player: IInputActionCollection2, IDisposab
                 },
                 {
                     ""name"": """",
+                    ""id"": ""bd273b95-deeb-4ac3-ad8d-96900e67d277"",
+                    ""path"": ""<Keyboard>/j"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PressE"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""01e93d3e-7bdb-47af-841c-30e4e75f65c5"",
                     ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""PressEsc"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""beec381d-6e0a-459f-87af-6fbd8b039ede"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PressR"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -227,6 +269,7 @@ public partial class @InputController_Player: IInputActionCollection2, IDisposab
         m_World_Jump = m_World.FindAction("Jump", throwIfNotFound: true);
         m_World_PressE = m_World.FindAction("PressE", throwIfNotFound: true);
         m_World_PressEsc = m_World.FindAction("PressEsc", throwIfNotFound: true);
+        m_World_PressR = m_World.FindAction("PressR", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -295,6 +338,7 @@ public partial class @InputController_Player: IInputActionCollection2, IDisposab
     private readonly InputAction m_World_Jump;
     private readonly InputAction m_World_PressE;
     private readonly InputAction m_World_PressEsc;
+    private readonly InputAction m_World_PressR;
     public struct WorldActions
     {
         private @InputController_Player m_Wrapper;
@@ -306,6 +350,7 @@ public partial class @InputController_Player: IInputActionCollection2, IDisposab
         public InputAction @Jump => m_Wrapper.m_World_Jump;
         public InputAction @PressE => m_Wrapper.m_World_PressE;
         public InputAction @PressEsc => m_Wrapper.m_World_PressEsc;
+        public InputAction @PressR => m_Wrapper.m_World_PressR;
         public InputActionMap Get() { return m_Wrapper.m_World; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -336,6 +381,9 @@ public partial class @InputController_Player: IInputActionCollection2, IDisposab
             @PressEsc.started += instance.OnPressEsc;
             @PressEsc.performed += instance.OnPressEsc;
             @PressEsc.canceled += instance.OnPressEsc;
+            @PressR.started += instance.OnPressR;
+            @PressR.performed += instance.OnPressR;
+            @PressR.canceled += instance.OnPressR;
         }
 
         private void UnregisterCallbacks(IWorldActions instance)
@@ -361,6 +409,9 @@ public partial class @InputController_Player: IInputActionCollection2, IDisposab
             @PressEsc.started -= instance.OnPressEsc;
             @PressEsc.performed -= instance.OnPressEsc;
             @PressEsc.canceled -= instance.OnPressEsc;
+            @PressR.started -= instance.OnPressR;
+            @PressR.performed -= instance.OnPressR;
+            @PressR.canceled -= instance.OnPressR;
         }
 
         public void RemoveCallbacks(IWorldActions instance)
@@ -387,5 +438,6 @@ public partial class @InputController_Player: IInputActionCollection2, IDisposab
         void OnJump(InputAction.CallbackContext context);
         void OnPressE(InputAction.CallbackContext context);
         void OnPressEsc(InputAction.CallbackContext context);
+        void OnPressR(InputAction.CallbackContext context);
     }
 }

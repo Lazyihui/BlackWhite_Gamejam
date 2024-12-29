@@ -58,6 +58,7 @@ namespace BW {
 
             GameUserInterface.ChangeMapRole(ctx, map, role);
             GameUserInterface.GamePause(ctx);
+            GameUserInterface.GameReStart(ctx);
 
         }
 

@@ -13,6 +13,8 @@ namespace BW {
 
         public bool isKeyDownEsc;
 
+        public bool isKeyDownR;
+
         public InputCore() {
             input_Role = new InputController_Player();
             input_Role.Enable();
@@ -78,6 +80,14 @@ namespace BW {
                 }
             }
 
+            // PressR
+            {
+                if (World.PressR.triggered) {
+                    isKeyDownR = true;
+                } else {
+                    isKeyDownR = false;
+                }
+            }
         }
     }
 }

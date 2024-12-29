@@ -73,5 +73,13 @@ namespace BW {
             }
         }
 
+        public static void GameReStart(GameContext ctx) {
+            var input = ctx.inputCore;
+
+            if (input.isKeyDownR) {
+                Restart(ctx);
+            }
+        }
+
     }
 }
