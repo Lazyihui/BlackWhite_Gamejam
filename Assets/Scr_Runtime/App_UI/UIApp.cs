@@ -23,38 +23,6 @@ public class UIApp {
         ctx.Inject(assetsCore, canvas);
     }
 
-    #region     Panel_Login
-    public void Panel_Restart_Open() {
-        Panel_Restart panel = ctx.panel_Restart;
-
-        if (panel == null) {
-            GameObject go = ctx.assetsCore.Panel_GetRestart();
-            if (!go) {
-                Debug.LogError("Panel_Restart not found");
-                return;
-            }
-
-            panel = GameObject.Instantiate(go, ctx.canvas.transform).GetComponent<Panel_Restart>();
-            panel.Ctor();
-            panel.OnClickRestartHandle = () => {
-                ctx.uiEvent.Panel_Restart_RestartClick();
-
-            };
-        }
-
-        ctx.panel_Restart = panel;
-    }
-
-    public void Panel_Restart_Close() {
-        Panel_Restart panel = ctx.panel_Restart;
-        if (panel == null) {
-            return;
-        }
-        panel.TearDown();
-        ctx.panel_Restart = null;
-
-    }
-    #endregion
 
     #region    Panel_NextStage
 

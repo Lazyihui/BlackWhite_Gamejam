@@ -28,8 +28,6 @@ namespace BW {
             // audio
             AudioDoamin.ClearAll(ctx);
 
-            // ui 
-            ctx.uiApp.Panel_Restart_Close();
 
         }
 
@@ -41,9 +39,6 @@ namespace BW {
 
             // audio
             AudioDoamin.ClearAll(ctx);
-
-            // ui 
-            ctx.uiApp.Panel_Restart_Close();
 
             game.ClearAllData();
 

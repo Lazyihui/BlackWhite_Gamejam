@@ -6,7 +6,6 @@ public class UIContext {
     public UIEvent uiEvent;
 
     //panel
-    public Panel_Restart panel_Restart;
     public Panel_NextStage panel_NextStage;
     public Panel_StartGame panel_StartGame;
     public Panel_GameOver panel_GameOver;

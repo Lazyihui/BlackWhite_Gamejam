@@ -10,8 +10,6 @@ namespace BW {
             var game = ctx.gameEntity;
             game.state = GameState.Game;
 
-            // ui
-            ctx.uiApp.Panel_Restart_Open();
 
             // map
             MapDomain.Spawn(ctx, game.stageCurID);

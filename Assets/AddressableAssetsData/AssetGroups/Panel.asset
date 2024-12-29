@@ -17,12 +17,6 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: d3f5b123d3f188546870b3e8cebec507
   m_SerializeEntries:
-  - m_GUID: 86ffd0247082ec44b83cc9936604b5ab
-    m_Address: Panel_Restart
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Panel
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f5d93cc25ec078a4a98beda3519a3f63
     m_Address: Panel_NextStage
     m_ReadOnly: 0
