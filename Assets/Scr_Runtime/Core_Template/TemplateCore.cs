@@ -14,10 +14,12 @@ namespace BW {
 
         public AsyncOperationHandle audioHandle;
 
+        public Dictionary<int, RoleSO> roles;
+
+
         public TemplateCore() {
             audios = new Dictionary<int, AudioTM>();
         }
-
 
         public async Task LoadAll() {
             {
@@ -32,6 +34,19 @@ namespace BW {
                 }
 
                 audioHandle = handle;
+            }
+            {
+                AssetLabelReference labelReference = new AssetLabelReference();
+
+                labelReference.labelString = "RoleSO";
+                var handle = Addressables.LoadAssetsAsync<RoleSO>(labelReference, null);
+
+                var all = await handle.Task;
+                roles = new Dictionary<int, RoleSO>();
+                foreach (var so in all) {
+                    var tm = so.tm;
+                    roles.Add(tm.typeID, so);
+                }
             }
         }
 

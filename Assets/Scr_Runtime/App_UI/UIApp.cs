@@ -24,7 +24,7 @@ public class UIApp {
     }
 
 
-    #region    Panel_NextStage
+    #region  Panel_NextStage
 
     public void Panel_NextStage_Open() {
         Panel_NextStage panel = ctx.panel_NextStage;
