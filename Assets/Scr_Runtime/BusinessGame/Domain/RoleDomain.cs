@@ -92,7 +92,7 @@ namespace BW {
             //     }
             // }
 
-            // TODO:为什么可以贴着墙跳 :解决 加一个摩擦力（没用摩擦力）
+            //为什么可以贴着墙跳 :解决 加一个摩擦力（没用摩擦力）
             bool isCollideGound = false;
 
             if (role.Velocity().y > 0) {
@@ -119,7 +119,7 @@ namespace BW {
         #endregion
 
         #region Check
-        // TODO:感觉要放到GameDomain里
+       
         public static void TouchFlag(GameContext ctx, RoleEntity role) {
             Vector2 rolePos = role.GetPos();
             var game = ctx.gameEntity;
@@ -133,6 +133,7 @@ namespace BW {
                     Vector2 flagPos = flag.GetPos();
                     float dis = Vector2.Distance(rolePos, flagPos);
                     if (dis < 0.5f) {
+                        //  // TODO:要放到GameDomain里
                         if (game.stageCurID < game.maxStageID) {
                             Debug.Log("进入下一关游戏胜利");
 
@@ -146,6 +147,7 @@ namespace BW {
                             game.state = GameState.GameOver;
 
                         }
+                        // 
                     }
                 }
             }
@@ -186,8 +188,7 @@ namespace BW {
 
         }
 
-        public static void GamePause(GameContext ctx, RoleEntity role)
-        {
+        public static void GamePause(GameContext ctx, RoleEntity role) {
             var input = ctx.inputCore;
             if (input.isKeyDownEsc) {
                 Debug.Log("isKeyDownE");

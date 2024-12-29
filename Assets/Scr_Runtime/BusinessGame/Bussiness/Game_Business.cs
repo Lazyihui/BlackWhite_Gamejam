@@ -66,7 +66,7 @@ namespace BW {
 
             RoleEntity role = ctx.Get_Role();
             // TODO:可以加一个RoleDomain.Tick(ctx,role)来处理role的逻辑
-            // TODO: 问： 是传入Vector2还是传入Ctx 
+            // TODO: 问： 是传入Vector2还是传入Ctx (目前传ctx)
             RoleDomain.Move(role, input.moveAxis);
             RoleDomain.Jump(ctx, role);
             RoleDomain.GroundCheck(ctx, role);
