@@ -19,7 +19,12 @@ namespace BW {
 
             var tm = so.tm;
             string n = "Role_Entity_" + tm.typeName;
+            if (gameObject.name != n) {
+                gameObject.name = n;
+            }
 
+            // transform.position = spawnTM.position;
+            // transform.rotation = Quaternion.Euler(spawnTM.rotation);
         }
 
         [ContextMenu("Save")]
