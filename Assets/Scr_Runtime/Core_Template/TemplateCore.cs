@@ -70,6 +70,10 @@ namespace BW {
 
         }
 
+        public bool TryGetStage(int stageID, out StageTM stage) {
+            return stages.TryGetValue(stageID, out stage);
+        }
+
         public void UnLoadAll() {
             if (audioHandle.IsValid()) {
                 Addressables.Release(audioHandle);

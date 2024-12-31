@@ -47,6 +47,7 @@ namespace BW {
             mapRepository.TryGet(gameEntity.curMapID, out MapEntity map);
             return map;
         }
+       
     }
 
 }

@@ -23,8 +23,6 @@ namespace BW {
                 gameObject.name = n;
             }
 
-            // transform.position = spawnTM.position;
-            // transform.rotation = Quaternion.Euler(spawnTM.rotation);
         }
 
         [ContextMenu("Save")]

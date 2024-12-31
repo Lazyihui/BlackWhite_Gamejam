@@ -19,19 +19,29 @@ namespace BW {
                 gameObject.name = n;
             }
 
-            Debug.Assert(so != null, "StageSO is null");
-            Debug.Assert(so.tm != null, "StageTM is null");
-            
             so.tm.stageID = stageID;
 
             Debug.Log("Save");
 
             // 这里是每个TM的数据保存
+            SaveRole(); 
 
         }
 
         public void SaveRole() {
-            
+            RoleSpawnEM[] rolesEM = GetComponentsInChildren<RoleSpawnEM>();
+            Debug.Log(rolesEM.Length);
+            RoleSpawnTM[] rolesTM = new RoleSpawnTM[rolesEM.Length];
+
+            for (int i = 0; i < rolesTM.Length; i++) {
+                RoleSpawnEM em = rolesEM[i];
+
+                em.Save();
+                rolesTM[i] = em.spawnTM;
+            }
+
+            so.tm.roleSpawns = rolesTM;
+            EditorUtility.SetDirty(so);
         }
     }
 }

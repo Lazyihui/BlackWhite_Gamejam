@@ -10,6 +10,14 @@ namespace BW {
             var game = ctx.gameEntity;
             game.state = GameState.Game;
 
+            // stage
+            int stageID = game.stageCurID;
+            bool has = ctx.templateCore.TryGetStage(stageID, out StageTM tm);
+            if (!has) {
+                Debug.LogError("stage not found: " + stageID);
+                return;
+            }
+
 
             // map
             MapDomain.Spawn(ctx, game.stageCurID);

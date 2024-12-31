@@ -2,10 +2,10 @@ using System;
 using UnityEngine;
 
 namespace BW {
+
+    [Serializable]
     public class StageTM {
         public int stageID;
-
-        public GameObject mapEntity;
 
         public RoleSpawnTM[] roleSpawns;
 
