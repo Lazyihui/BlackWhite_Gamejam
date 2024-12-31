@@ -19,6 +19,9 @@ namespace BW {
                 gameObject.name = n;
             }
 
+            Debug.Assert(so != null, "StageSO is null");
+            Debug.Assert(so.tm != null, "StageTM is null");
+            
             so.tm.stageID = stageID;
 
             Debug.Log("Save");

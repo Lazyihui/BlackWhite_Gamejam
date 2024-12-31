@@ -11,10 +11,14 @@ namespace BW {
     public class TemplateCore {
 
         public Dictionary<int, AudioTM> audios;
-
         public AsyncOperationHandle audioHandle;
 
-        public Dictionary<int, RoleSO> roles;
+
+        public Dictionary<int, StageTM> stages;
+        public AsyncOperationHandle stageHandle;
+
+        public Dictionary<int, RoleTM> roles;
+        public AsyncOperationHandle roleHandle;
 
 
         public TemplateCore() {
@@ -38,21 +42,43 @@ namespace BW {
             {
                 AssetLabelReference labelReference = new AssetLabelReference();
 
-                labelReference.labelString = "RoleSO";
-                var handle = Addressables.LoadAssetsAsync<RoleSO>(labelReference, null);
-
+                labelReference.labelString = "So_Stage";
+                var handle = Addressables.LoadAssetsAsync<StageSO>(labelReference, null);
                 var all = await handle.Task;
-                roles = new Dictionary<int, RoleSO>();
+
                 foreach (var so in all) {
                     var tm = so.tm;
-                    roles.Add(tm.typeID, so);
+                    stages.Add(tm.stageID, tm);
                 }
+
+                stageHandle = handle;
             }
+            {
+                AssetLabelReference labelReference = new AssetLabelReference();
+
+                labelReference.labelString = "So_Role";
+                var handle = Addressables.LoadAssetsAsync<RoleSO>(labelReference, null);
+                var all = await handle.Task;
+
+                foreach (var so in all) {
+                    var tm = so.tm;
+                    roles.Add(tm.typeID, tm);
+                }
+
+                roleHandle = handle;
+            }
+
         }
 
         public void UnLoadAll() {
             if (audioHandle.IsValid()) {
                 Addressables.Release(audioHandle);
+            }
+            if (stageHandle.IsValid()) {
+                Addressables.Release(stageHandle);
+            }
+            if (roleHandle.IsValid()) {
+                Addressables.Release(roleHandle);
             }
         }
 

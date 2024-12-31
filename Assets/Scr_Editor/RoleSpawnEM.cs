@@ -2,11 +2,15 @@ using System;
 using UnityEngine;
 
 namespace BW {
+
+
+    [ExecuteInEditMode]
     public class RoleSpawnEM : MonoBehaviour {
 
         public RoleSpawnTM spawnTM;
 
         void Update() {
+
 
             var so = spawnTM.so;
             if (so == null) {
@@ -15,7 +19,6 @@ namespace BW {
 
             var tm = so.tm;
             string n = "Role_Entity_" + tm.typeName;
-
 
         }
 

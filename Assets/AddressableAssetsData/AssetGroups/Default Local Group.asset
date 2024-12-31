@@ -17,42 +17,6 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 6bf3c8668a5f760479cfb18cb91bb04d
   m_SerializeEntries:
-  - m_GUID: 9aa7f3ba5cec25c49b7ebf8b78767844
-    m_Address: Entity_Map_Variant_1
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Entity
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 0994cef353341b142bbba1f703e9c931
-    m_Address: Entity_Map_Variant_3
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Entity
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 6d1b6a17db666474fa31f0bb7828974b
-    m_Address: Entity_Map_Variant_2
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Entity
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b2a6bdb9729a1c0499c3cc07de47636c
-    m_Address: Entity_Map_Variant_4
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Entity
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 72299bdff633d7c49b8582ad1f50ecb8
-    m_Address: Entity_Map_Variant_5
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Entity
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 2c041e6b3075c8745aec405a0ee308f2
-    m_Address: Entity_Map_Variant_0
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Entity
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 16213f8decbd9b745a000efcadb3f620
     m_Address: AudioTM_Bg
     m_ReadOnly: 0
@@ -65,23 +29,17 @@ MonoBehaviour:
     m_SerializedLabels:
     - AudioTM
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e8b10b817892f3144ba805d1aa8fc94e
-    m_Address: Panel_GameOver
+  - m_GUID: f5141bb3326ab934aafe524a910dee64
+    m_Address: StageSO_0
     m_ReadOnly: 0
     m_SerializedLabels:
-    - Panel
+    - So_Stage
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 32415e49f97cdad428dd897fe004a966
-    m_Address: Panel_Pause
+  - m_GUID: ba33488b09b49e64fb4efa516487ee9d
+    m_Address: So_Role_1_Owner
     m_ReadOnly: 0
     m_SerializedLabels:
-    - Panel
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 3dbf583e1b4768b4bb3069e862c72d36
-    m_Address: Panel_SelectStage
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Panel
+    - So_Role
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: d4c3f258e9fbd214586f555e4b1682da, type: 2}

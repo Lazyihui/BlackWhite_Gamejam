@@ -48,6 +48,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e9f50dfe4ce46d24185fa4df96d69a7d, type: 2}
   - {fileID: 11400000, guid: fc3c884c34724d543a3ca4b5b326387b, type: 2}
   - {fileID: 11400000, guid: 4461e03b01177fa4dbf85dab0f5f50f8, type: 2}
+  - {fileID: 11400000, guid: 8d83689d9b8dcdf40a25b00adfd1aa34, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -92,6 +93,8 @@ MonoBehaviour:
     - Entity
     - Panel
     - AudioTM
+    - So_Stage
+    - So_Role
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 67e366cdc9c329543a4537e556c419e9, type: 2}

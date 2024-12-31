@@ -10,52 +10,52 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Entity
+  m_Name: EntityMap
   m_EditorClassIdentifier: 
-  m_GroupName: Entity
+  m_GroupName: EntityMap
   m_Data:
     m_SerializedData: []
-  m_GUID: 0458826e29d655e4f9859ed3547d541f
+  m_GUID: 6da6e2ea445cea3408ae10ad45ac763b
   m_SerializeEntries:
-  - m_GUID: 65d36adb24cf019499799a9193a22931
-    m_Address: Entity_Role
+  - m_GUID: 9aa7f3ba5cec25c49b7ebf8b78767844
+    m_Address: Entity_Map_Variant_1
     m_ReadOnly: 0
     m_SerializedLabels:
     - Entity
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b3e669ef1556d6d469988b2c401a0cd4
-    m_Address: Entity_Flag
+  - m_GUID: 0994cef353341b142bbba1f703e9c931
+    m_Address: Entity_Map_Variant_3
     m_ReadOnly: 0
     m_SerializedLabels:
     - Entity
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 73d8aa9bf50597b45babefb85391d2af
-    m_Address: AudioEnitity
+  - m_GUID: 6d1b6a17db666474fa31f0bb7828974b
+    m_Address: Entity_Map_Variant_2
     m_ReadOnly: 0
     m_SerializedLabels:
     - Entity
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 32415e49f97cdad428dd897fe004a966
-    m_Address: Panel_Pause
+  - m_GUID: b2a6bdb9729a1c0499c3cc07de47636c
+    m_Address: Entity_Map_Variant_4
     m_ReadOnly: 0
     m_SerializedLabels:
-    - Panel
+    - Entity
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e8b10b817892f3144ba805d1aa8fc94e
-    m_Address: Panel_GameOver
+  - m_GUID: 72299bdff633d7c49b8582ad1f50ecb8
+    m_Address: Entity_Map_Variant_5
     m_ReadOnly: 0
     m_SerializedLabels:
-    - Panel
+    - Entity
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 3dbf583e1b4768b4bb3069e862c72d36
-    m_Address: Panel_SelectStage
+  - m_GUID: 2c041e6b3075c8745aec405a0ee308f2
+    m_Address: Entity_Map_Variant_0
     m_ReadOnly: 0
     m_SerializedLabels:
-    - Panel
+    - Entity
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: d4c3f258e9fbd214586f555e4b1682da, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: 93512275eb192c240a343885574248e3, type: 2}
-    - {fileID: 11400000, guid: 0021e247a1621fc4181d55f60ddbf3f5, type: 2}
+    - {fileID: 11400000, guid: 7d3e180bdb19bf545b6ccdbd18b9315a, type: 2}
+    - {fileID: 11400000, guid: ebcd25949bfa2af4999e39841eebcada, type: 2}
