@@ -30,7 +30,7 @@ MonoBehaviour:
     - AudioTM
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f5141bb3326ab934aafe524a910dee64
-    m_Address: StageSO_0
+    m_Address: So_Stage_0
     m_ReadOnly: 0
     m_SerializedLabels:
     - So_Stage
@@ -40,6 +40,18 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - So_Role
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 60dd68988d491374bb8394dfbff6ed7e
+    m_Address: So_Stage_2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - So_Stage
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 33a2a412ff3d03744bd5fd8bef80cd6a
+    m_Address: So_Stage_1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - So_Stage
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: d4c3f258e9fbd214586f555e4b1682da, type: 2}

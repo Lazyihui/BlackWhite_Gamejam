@@ -4,13 +4,18 @@ using UnityEngine;
 namespace BW {
     public static class RoleDomain {
 
+        public static RoleEntity SpawnBySpawn(GameContext ctx, int typeID, RoleSpawnTM spawnTM) {
+            RoleEntity role = GameFactory.Role_CreateBySpawn(ctx, spawnTM);
+            role.typeID = typeID;
+            ctx.roleRepository.Add(role);
+            return role;
+        }
         public static RoleEntity Spawn(GameContext ctx, int typeID) {
             RoleEntity role = GameFactory.Role_Create(ctx);
             role.typeID = typeID;
             ctx.roleRepository.Add(role);
             return role;
         }
-
         public static void UnSpawn(GameContext ctx, RoleEntity role) {
             ctx.roleRepository.Remove(role);
             role.TearDown();
@@ -119,7 +124,7 @@ namespace BW {
         #endregion
 
         #region Check
-       
+
         public static void TouchFlag(GameContext ctx, RoleEntity role) {
             Vector2 rolePos = role.GetPos();
             var game = ctx.gameEntity;

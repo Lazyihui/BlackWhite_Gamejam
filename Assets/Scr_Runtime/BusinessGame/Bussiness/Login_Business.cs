@@ -10,10 +10,8 @@ public static class Login_Business {
         // ui
         ctx.uiApp.Panel_StartGame_Open();
 
-        // map
         MapDomain.Spawn(ctx, 0);
 
-        // role
         RoleEntity role = RoleDomain.Spawn(ctx, 1);
 
         ctx.audioBG = AudioDoamin.Spawn(ctx, 0);

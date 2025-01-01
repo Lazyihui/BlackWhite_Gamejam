@@ -18,12 +18,14 @@ namespace BW {
                 return;
             }
 
-
             // map
             MapDomain.Spawn(ctx, game.stageCurID);
 
+            for (int i = 0; i < tm.roleSpawns.Length; i += 1) {
+                RoleSpawnTM spawnTM = tm.roleSpawns[i];
+                RoleEntity role = RoleDomain.SpawnBySpawn(ctx, 1,spawnTM);
+            }
             // role
-            RoleEntity role = RoleDomain.Spawn(ctx, 1);
             Vector2 pos = new Vector2(7.75f, -3.9f);
             FlagDomain.Spawn(ctx, 1, pos);
 

@@ -4,6 +4,22 @@ using UnityEngine;
 namespace BW {
 
     public static class GameFactory {
+        public static RoleEntity Role_CreateBySpawn(GameContext ctx, RoleSpawnTM spawnTM) {
+            GameObject prefab = ctx.assetsCore.Entity_GetRole();
+            if (prefab == null) {
+                Debug.LogError("Role prefab is null");
+            }
+            RoleEntity role = GameObject.Instantiate(prefab).GetComponent<RoleEntity>();
+            role.Ctor();
+            role.idSig = ctx.gameEntity.ownerID;
+
+            // spawmTM
+            role.TF_Transfrom(spawnTM.position);
+            role.TF_Rotation(spawnTM.rotation);
+
+
+            return role;
+        }
         public static RoleEntity Role_Create(GameContext ctx) {
             GameObject prefab = ctx.assetsCore.Entity_GetRole();
             if (prefab == null) {
@@ -13,9 +29,9 @@ namespace BW {
             role.Ctor();
             role.idSig = ctx.gameEntity.ownerID;
 
+
             return role;
         }
-
         public static FlagEntity Flag_Create(GameContext ctx, Vector2 pos) {
             GameObject prefab = ctx.assetsCore.Entity_GetFlag();
             if (prefab == null) {

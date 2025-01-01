@@ -23,6 +23,8 @@ namespace BW {
 
         public TemplateCore() {
             audios = new Dictionary<int, AudioTM>();
+            stages = new Dictionary<int, StageTM>();
+            roles = new Dictionary<int, RoleTM>();
         }
 
         public async Task LoadAll() {
