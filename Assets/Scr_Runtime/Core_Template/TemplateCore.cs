@@ -20,11 +20,15 @@ namespace BW {
         public Dictionary<int, RoleTM> roles;
         public AsyncOperationHandle roleHandle;
 
+        public Dictionary<int, FlagTM> flags;
+        public AsyncOperationHandle flagHandle;
+
 
         public TemplateCore() {
             audios = new Dictionary<int, AudioTM>();
             stages = new Dictionary<int, StageTM>();
             roles = new Dictionary<int, RoleTM>();
+            flags = new Dictionary<int, FlagTM>();
         }
 
         public async Task LoadAll() {
@@ -69,6 +73,20 @@ namespace BW {
 
                 roleHandle = handle;
             }
+            {
+                AssetLabelReference labelReference = new AssetLabelReference();
+
+                labelReference.labelString = "So_Flag";
+                var handle = Addressables.LoadAssetsAsync<FlagSo>(labelReference, null);
+                var all = await handle.Task;
+
+                foreach (var so in all) {
+                    var tm = so.tm;
+                    flags.Add(tm.typeID, tm);
+                }
+
+                flagHandle = handle;
+            }
 
         }
 
@@ -85,6 +103,9 @@ namespace BW {
             }
             if (roleHandle.IsValid()) {
                 Addressables.Release(roleHandle);
+            }
+            if (flagHandle.IsValid()) {
+                Addressables.Release(flagHandle);
             }
         }
 
