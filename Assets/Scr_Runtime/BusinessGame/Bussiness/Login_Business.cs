@@ -12,7 +12,13 @@ public static class Login_Business {
 
         MapDomain.Spawn(ctx, 0);
 
-        RoleEntity role = RoleDomain.Spawn(ctx, 1);
+        bool has = ctx.templateCore.TryGetStage(0, out StageTM tm);
+
+
+        for (int i = 0; i < tm.roleSpawns.Length; i += 1) {
+            RoleSpawnTM spawnTM = tm.roleSpawns[i];
+            RoleEntity role = RoleDomain.SpawnBySpawn(ctx, 1, spawnTM);
+        }
 
         ctx.audioBG = AudioDoamin.Spawn(ctx, 0);
         AudioDoamin.PlayAudio(ctx, ctx.audioBG);

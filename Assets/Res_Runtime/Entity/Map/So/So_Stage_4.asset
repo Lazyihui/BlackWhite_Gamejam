@@ -16,7 +16,7 @@ MonoBehaviour:
     stageID: 4
     roleSpawns:
     - so: {fileID: 11400000, guid: ba33488b09b49e64fb4efa516487ee9d, type: 2}
-      position: {x: 3.507535, y: -0.91368574, z: -0.41538924}
+      position: {x: -9.5, y: -3, z: 0}
       rotation: {x: -0, y: 0, z: 0}
     flagSpawns:
     - so: {fileID: 11400000, guid: 4976817ebfc475e49a8b501d62fb1288, type: 2}
