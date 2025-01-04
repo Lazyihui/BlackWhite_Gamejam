@@ -24,7 +24,8 @@ namespace BW {
             Debug.Log("Save");
 
             // 这里是每个TM的数据保存
-            SaveRole(); 
+            SaveRole();
+            SaveFlag();
 
         }
 
@@ -41,6 +42,22 @@ namespace BW {
             }
 
             so.tm.roleSpawns = rolesTM;
+            EditorUtility.SetDirty(so);
+        }
+
+        public void SaveFlag() {
+            FlagSpawnEM[] flagsEM = GetComponentsInChildren<FlagSpawnEM>();
+
+            FlagSpawnTM[] flagsTM = new FlagSpawnTM[flagsEM.Length];
+
+            for (int i = 0; i < flagsTM.Length; i++) {
+                FlagSpawnEM em = flagsEM[i];
+
+                em.Save();
+                flagsTM[i] = em.spawnTM;
+            }
+
+            so.tm.flagSpawns = flagsTM;
             EditorUtility.SetDirty(so);
         }
     }
