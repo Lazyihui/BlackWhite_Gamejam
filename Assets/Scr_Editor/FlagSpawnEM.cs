@@ -15,7 +15,7 @@ namespace BW {
             }
 
             var tm = so.tm;
-            string n = "Role_Entity_" + tm.typeName;
+            string n = "Flag_Entity_" + tm.typeName;
             if (gameObject.name != n) {
                 gameObject.name = n;
             }

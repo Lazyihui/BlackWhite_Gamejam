@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: So_Flag_1
   m_EditorClassIdentifier: 
   tm:
-    typeName: 
-    typeID: 0
+    typeName: Flag
+    typeID: 1
