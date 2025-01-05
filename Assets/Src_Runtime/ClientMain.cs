@@ -17,7 +17,6 @@ namespace BW {
         bool isTearDown = false;
         bool isInit = false;
         void Awake() {
-            Debug.Log("Main Awake");
 
             // Init
             ctx = new GameContext();
@@ -38,7 +37,7 @@ namespace BW {
                 isInit = true;
 
                 // GameEnter;
-                Login_Business.Enter(ctx);
+                // Login_Business.Enter(ctx);
             };
 
             action.Invoke();

@@ -61,6 +61,7 @@ public static class Login_Business {
         GameUserInterface.GamePause(ctx);
 
     }
+    static FlagEntity flag;
 
     public static void LogicTick(GameContext ctx, float dt) {
         var input = ctx.inputCore;
@@ -74,8 +75,15 @@ public static class Login_Business {
 
         RoleDomain.Shuttleboundary(ctx, role);
         RoleDomain.SetLastDir(ctx, role);
-        if (Input.GetKeyDown(KeyCode.Escape)) {
-            FlagDomain.Spawn(ctx, 1, new Vector2(0, 0));
+
+        if (Input.GetKeyDown(KeyCode.L)) {
+            Debug.Log("L");
+            flag = FlagDomain.Spawn(ctx, 1, new Vector2(-7.5f, -3.9f));
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.P)) {
+            FlagDomain.UnSpawn(ctx, flag);
         }
     }
 
