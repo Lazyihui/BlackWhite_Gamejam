@@ -15,8 +15,6 @@ namespace BW {
 
             // spawmTM
             role.TF_Transfrom(spawnTM.position);
-            Debug.Log("spawnTM.position: " + spawnTM.position);
-            Debug.Log("spawnTM.rotation: " + spawnTM.rotation);
             role.TF_Rotation(spawnTM.rotation);
 
 

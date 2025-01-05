@@ -1,5 +1,13 @@
 {
   "dependencies": {
+    "com.codewriter.triinspector": {
+      "version": "file:D:/外部库/Tri-Inspector",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.unity.localization": "1.0.0"
+      }
+    },
     "com.unity.2d.animation": {
       "version": "10.0.3",
       "depth": 1,
@@ -181,6 +189,12 @@
         "com.unity.modules.uielements": "1.0.0"
       },
       "url": "https://packages.unity.cn"
+    },
+    "com.unity.localization": {
+      "version": "file:D:/外部库/Unity-Localization-Stub-for-Tri-Inspector",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
     },
     "com.unity.mathematics": {
       "version": "1.2.6",
