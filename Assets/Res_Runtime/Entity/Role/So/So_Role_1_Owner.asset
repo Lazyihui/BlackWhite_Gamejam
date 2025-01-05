@@ -16,3 +16,4 @@ MonoBehaviour:
     typeName: Player
     typeID: 0
     moveSpeed: 5
+    sprite: {fileID: 12323174, guid: 1af41e4082682e94392ad4b6e9d48ae0, type: 3}

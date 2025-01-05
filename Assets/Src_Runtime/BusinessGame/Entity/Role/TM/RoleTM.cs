@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using TriInspector;
 
 namespace BW {
 
@@ -9,6 +10,9 @@ namespace BW {
         public string typeName;
         public int typeID;
         public float moveSpeed;
+
+        [Title("Renderer")]
+        public Sprite sprite;
 
     }
 
