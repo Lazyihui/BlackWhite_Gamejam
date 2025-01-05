@@ -3,6 +3,7 @@ Shader "Unlit/Fade"
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
+        _FadeSpeed ("Fade Speed", Float) = 1
     }
     SubShader
     {
@@ -35,6 +36,8 @@ Shader "Unlit/Fade"
             sampler2D _MainTex;
             float4 _MainTex_ST;
 
+            float _FadeSpeed;
+
             v2f vert (appdata v)
             {
                 v2f o;
@@ -49,8 +52,9 @@ Shader "Unlit/Fade"
                 // sample the texture
                 fixed4 col = tex2D(_MainTex, i.uv);
                 // apply fog
-                UNITY_APPLY_FOG(i.fogCoord, col);
-                return col;
+                // UNITY_APPLY_FOG(i.fogCoord, col);//目前不知道这个是干嘛的
+                float fade = 1.0 -(i.uv.y / _FadeSpeed);
+                return col*fade;
             }
             ENDCG
         }
