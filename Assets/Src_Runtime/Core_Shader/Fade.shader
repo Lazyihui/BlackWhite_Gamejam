@@ -1,12 +1,9 @@
-Shader "Unlit/BuildingShader"
+Shader "Unlit/Fade"
 {
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
-        // _Color ("Color", Color) = (1,1,1,1)
-        // _BuildingColor ("Building Color", Color) = (1,1,1,1)
-        // _BuildingOffset ("Building Offset", Float) = 0.0
-        _BuildingOffset ("Building Offset", Float) = 1
+        _FadeSpeed ("Fade Speed", Float) = 1
     }
     SubShader
     {
@@ -39,29 +36,27 @@ Shader "Unlit/BuildingShader"
             sampler2D _MainTex;
             float4 _MainTex_ST;
 
-            float _BuildingOffset;
+            float _FadeSpeed;
 
             v2f vert (appdata v)
             {
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
-                // 输出的uv存储在o.uv值中，z存储用于Clip的参数值
                 o.uv = TRANSFORM_TEX(v.uv, _MainTex);
-
-                o.uv.y = o.uv.y - _BuildingOffset;
-
+                UNITY_TRANSFER_FOG(o,o.vertex);
                 return o;
             }
 
             fixed4 frag (v2f i) : SV_Target
             {
-                clip(i.uv.y);
                 // sample the texture
-                fixed4 col = tex2D(_MainTex, i.uv.xy);
-                return col;
+                fixed4 col = tex2D(_MainTex, i.uv);
+                // apply fog
+                // UNITY_APPLY_FOG(i.fogCoord, col);//目前不知道这个是干嘛的
+                float fade = 1.0 -(i.uv.y / _FadeSpeed);
+                return col*fade;
             }
             ENDCG
         }
     }
-    FallBack "Diffuse"
 }
