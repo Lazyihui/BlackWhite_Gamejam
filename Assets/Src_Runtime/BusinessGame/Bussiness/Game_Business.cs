@@ -23,11 +23,15 @@ namespace BW {
 
             for (int i = 0; i < tm.roleSpawns.Length; i += 1) {
                 RoleSpawnTM spawnTM = tm.roleSpawns[i];
-                RoleEntity role = RoleDomain.SpawnBySpawn(ctx, 1,spawnTM);
+                // TODO:这个TypeID好像可以不用了 就是不要了 等等改
+                RoleEntity role = RoleDomain.SpawnBySpawn(ctx, 1, spawnTM);
             }
-            // role
-            Vector2 pos = new Vector2(7.75f, -3.9f);
-            FlagDomain.Spawn(ctx, 1, pos);
+
+            for (int i = 0; i < tm.flagSpawns.Length; i += 1) {
+                FlagSpawnTM spawnTM = tm.flagSpawns[i];
+                // TODO:这个TypeID好像可以不用了 就是不要了 等等改
+                FlagDomain.SpawnBySpawner(ctx, 1, spawnTM);
+            }
 
             ctx.audioBG = AudioDoamin.Spawn(ctx, 0);
             AudioDoamin.PlayAudio(ctx, ctx.audioBG);

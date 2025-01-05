@@ -74,6 +74,9 @@ public static class Login_Business {
 
         RoleDomain.Shuttleboundary(ctx, role);
         RoleDomain.SetLastDir(ctx, role);
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            FlagDomain.Spawn(ctx, 1, new Vector2(0, 0));
+        }
     }
 
     public static void LastTick(GameContext ctx, float dt) { }

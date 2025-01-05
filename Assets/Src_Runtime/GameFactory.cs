@@ -32,6 +32,21 @@ namespace BW {
 
             return role;
         }
+        public static FlagEntity Flag_CreateBySpawner(GameContext ctx, FlagSpawnTM spawnTM) {
+            GameObject prefab = ctx.assetsCore.Entity_GetFlag();
+            if (prefab == null) {
+                Debug.LogError("Flag prefab is null");
+            }
+            FlagEntity entity = GameObject.Instantiate(prefab).GetComponent<FlagEntity>();
+
+            entity.Ctor();
+            entity.idSig = ctx.gameEntity.flagIDRecord++;
+
+            entity.TF_Transfrom(spawnTM.position);
+            entity.TF_Rotation(spawnTM.rotation);
+
+            return entity;
+        }
         public static FlagEntity Flag_Create(GameContext ctx, Vector2 pos) {
             GameObject prefab = ctx.assetsCore.Entity_GetFlag();
             if (prefab == null) {
@@ -42,11 +57,10 @@ namespace BW {
             entity.Ctor();
             entity.idSig = ctx.gameEntity.flagIDRecord++;
 
-            entity.SetPos(pos);
+            entity.TF_Transfrom(pos);
 
             return entity;
         }
-
         public static MapEntity Map_Create(GameContext ctx, int stageID) {
             GameObject prefab = ctx.assetsCore.Entity_GetMap(stageID);
             if (prefab == null) {
