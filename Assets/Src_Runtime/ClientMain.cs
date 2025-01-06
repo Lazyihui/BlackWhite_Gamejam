@@ -37,7 +37,7 @@ namespace BW {
                 isInit = true;
 
                 // GameEnter;
-                // Login_Business.Enter(ctx);
+                Login_Business.Enter(ctx);
             };
 
             action.Invoke();
