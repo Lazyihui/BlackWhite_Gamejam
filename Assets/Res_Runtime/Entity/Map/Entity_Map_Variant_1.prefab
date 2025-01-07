@@ -1,16 +1,17 @@
 %YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
+%TAG !u! tag:yousandi.cn,2023:
 --- !u!1 &1180018640669868122
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 409622591129726981}
   - component: {fileID: 2203589398560022074}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: BGBlack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,8 +50,8 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
+  m_virtualGeometry: 0
+  m_virtualGeometryShadow: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -92,13 +93,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 5667870098815366831}
   - component: {fileID: 7554684023738698593}
   - component: {fileID: 6154590360254016671}
   - component: {fileID: 6156748957393140674}
   m_Layer: 5
+  m_HasEditorInfo: 1
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -194,12 +196,13 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 2722124242924391587}
   - component: {fileID: 3964068988287151233}
   - component: {fileID: 1533391665282022471}
   m_Layer: 5
+  m_HasEditorInfo: 1
   m_Name: TipText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -273,11 +276,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 5962470098103221205}
   - component: {fileID: 5705557068178881083}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: BGWhite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -316,8 +320,8 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
+  m_virtualGeometry: 0
+  m_virtualGeometryShadow: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1502,7 +1506,15 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7209347189202914123, guid: 82af4252c0773254a8ad3385d4876c07, type: 3}
+      propertyPath: m_UsedByComposite
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7209347189202914123, guid: 82af4252c0773254a8ad3385d4876c07, type: 3}
       propertyPath: m_CompositeOperation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7565979097846123959, guid: 82af4252c0773254a8ad3385d4876c07, type: 3}
+      propertyPath: m_UsedByComposite
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9017416917283269014, guid: 82af4252c0773254a8ad3385d4876c07, type: 3}

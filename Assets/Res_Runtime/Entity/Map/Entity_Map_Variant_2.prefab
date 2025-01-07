@@ -1,17 +1,18 @@
 %YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
+%TAG !u! tag:yousandi.cn,2023:
 --- !u!1 &2294346830932135619
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 4999478043939726492}
   - component: {fileID: 4708387349603444070}
   - component: {fileID: 7354749324495259985}
   m_Layer: 5
+  m_HasEditorInfo: 1
   m_Name: TipText_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,12 +86,13 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 5395060151799607209}
   - component: {fileID: 8145656777310533412}
   - component: {fileID: 4891208687584519056}
   m_Layer: 5
+  m_HasEditorInfo: 1
   m_Name: TipText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,11 +166,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 2306013000818126463}
   - component: {fileID: 847101963173906229}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: BGBlack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -207,8 +210,8 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
+  m_virtualGeometry: 0
+  m_virtualGeometryShadow: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -250,12 +253,13 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 3235650593871149629}
   - component: {fileID: 8491072168870978676}
   - component: {fileID: 8433888437233210647}
   m_Layer: 5
+  m_HasEditorInfo: 1
   m_Name: TipText_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -329,13 +333,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 3200389177069961766}
   - component: {fileID: 1767424892342694846}
   - component: {fileID: 4024539968009924264}
   - component: {fileID: 616412292811596826}
   m_Layer: 5
+  m_HasEditorInfo: 1
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -433,11 +438,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 2500826975300021870}
   - component: {fileID: 144528218428231335}
   m_Layer: 0
+  m_HasEditorInfo: 1
   m_Name: BGWhite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -476,8 +482,8 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
+  m_virtualGeometry: 0
+  m_virtualGeometryShadow: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3220,6 +3226,14 @@ PrefabInstance:
     - target: {fileID: 7064135706839888722, guid: 82af4252c0773254a8ad3385d4876c07, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7209347189202914123, guid: 82af4252c0773254a8ad3385d4876c07, type: 3}
+      propertyPath: m_UsedByComposite
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7565979097846123959, guid: 82af4252c0773254a8ad3385d4876c07, type: 3}
+      propertyPath: m_UsedByComposite
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9017416917283269014, guid: 82af4252c0773254a8ad3385d4876c07, type: 3}
       propertyPath: m_Tiles.Array.size

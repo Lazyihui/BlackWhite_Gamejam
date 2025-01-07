@@ -1,17 +1,18 @@
 %YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
+%TAG !u! tag:yousandi.cn,2023:
 --- !u!1 &480311350345434487
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 4532211871949897002}
   - component: {fileID: 530070905853565711}
   - component: {fileID: 2479463986920137425}
   m_Layer: 5
+  m_HasEditorInfo: 1
   m_Name: Text (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,12 +86,13 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 1394385340801932889}
   - component: {fileID: 3073479306918587924}
   - component: {fileID: 1455107255533953183}
   m_Layer: 5
+  m_HasEditorInfo: 1
   m_Name: Text (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,13 +166,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 893456062543726712}
   - component: {fileID: 3483544813640690870}
   - component: {fileID: 1576966304716152307}
   - component: {fileID: -1853203093077117860}
   m_Layer: 5
+  m_HasEditorInfo: 1
   m_Name: Panel_SelectStage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -258,13 +261,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 3371643580217705547}
   - component: {fileID: 1526669651413961306}
   - component: {fileID: 7534160049888858083}
   - component: {fileID: 2691832875456279958}
   m_Layer: 5
+  m_HasEditorInfo: 1
   m_Name: btn_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -319,7 +323,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1826742305, guid: 1af41e4082682e94392ad4b6e9d48ae0, type: 3}
+  m_Sprite: {fileID: 8445341952193843813, guid: c1a9a9e3c2d86dd4b876106a39d4e24a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -379,12 +383,13 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 2933399746865004906}
   - component: {fileID: 8243070020879101170}
   - component: {fileID: 2388753263684602992}
   m_Layer: 5
+  m_HasEditorInfo: 1
   m_Name: Text (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -458,12 +463,13 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 6634937876904269158}
   - component: {fileID: 5537759059084686988}
   - component: {fileID: 6692112182750532746}
   m_Layer: 5
+  m_HasEditorInfo: 1
   m_Name: Text (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -537,12 +543,13 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 605194027475533665}
   - component: {fileID: 157902166711005689}
   - component: {fileID: 2623969921365767078}
   m_Layer: 5
+  m_HasEditorInfo: 1
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -619,13 +626,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 4863952202398575828}
   - component: {fileID: 2731276857637970330}
   - component: {fileID: 24168577375159651}
   - component: {fileID: 8348531055591510611}
   m_Layer: 5
+  m_HasEditorInfo: 1
   m_Name: btn_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -680,7 +688,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1826742305, guid: 1af41e4082682e94392ad4b6e9d48ae0, type: 3}
+  m_Sprite: {fileID: 8445341952193843813, guid: c1a9a9e3c2d86dd4b876106a39d4e24a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -740,13 +748,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 269076568667711822}
   - component: {fileID: 752189327750053385}
   - component: {fileID: 620319655531365044}
   - component: {fileID: 2547592757423291785}
   m_Layer: 5
+  m_HasEditorInfo: 1
   m_Name: btn_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -801,7 +810,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1826742305, guid: 1af41e4082682e94392ad4b6e9d48ae0, type: 3}
+  m_Sprite: {fileID: 8445341952193843813, guid: c1a9a9e3c2d86dd4b876106a39d4e24a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -861,13 +870,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 1985084186754615287}
   - component: {fileID: 5042944460133306650}
   - component: {fileID: 7551969850018734272}
   - component: {fileID: 3175394655863066052}
   m_Layer: 5
+  m_HasEditorInfo: 1
   m_Name: btn_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -922,7 +932,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1826742305, guid: 1af41e4082682e94392ad4b6e9d48ae0, type: 3}
+  m_Sprite: {fileID: 8445341952193843813, guid: c1a9a9e3c2d86dd4b876106a39d4e24a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -982,12 +992,13 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 5735590181180475044}
   - component: {fileID: 2071458468695098380}
   - component: {fileID: 1827591996459750037}
   m_Layer: 5
+  m_HasEditorInfo: 1
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1042,8 +1053,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 4348207233214781540, guid: 127c7c269760a744a80b30af80ea3309, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1058,13 +1069,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 6295584337054461090}
   - component: {fileID: 5685819464984938660}
   - component: {fileID: 2257259923600198468}
   - component: {fileID: 7618248244300392721}
   m_Layer: 5
+  m_HasEditorInfo: 1
   m_Name: btn_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1119,7 +1131,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1826742305, guid: 1af41e4082682e94392ad4b6e9d48ae0, type: 3}
+  m_Sprite: {fileID: 8445341952193843813, guid: c1a9a9e3c2d86dd4b876106a39d4e24a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1179,12 +1191,13 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
+  serializedVersion: 7
   m_Component:
   - component: {fileID: 1004491574780794874}
   - component: {fileID: 8604758109957441252}
   - component: {fileID: 3641966041573723197}
   m_Layer: 5
+  m_HasEditorInfo: 1
   m_Name: Text (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
