@@ -1,0 +1,18 @@
+{
+    "name": "BlackWhite.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:9d1f701059c9a9346b9af9dcc1249a46"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "UNITY_EDITOR"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
