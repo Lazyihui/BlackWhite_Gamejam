@@ -51,10 +51,16 @@ Shader "Unlit/Fade"
             {
                 // sample the texture
                 fixed4 col = tex2D(_MainTex, i.uv);
-                // apply fog
-                // UNITY_APPLY_FOG(i.fogCoord, col);//目前不知道这个是干嘛的
-                float fade = 1.0 -(i.uv.y / _FadeSpeed);
-                return col*fade;
+                
+                if(col.a > 0)
+                {
+                    // apply fog
+                    // UNITY_APPLY_FOG(i.fogCoord, col);//目前不知道这个是干嘛的
+                    float fade = 1.0 -(i.uv.y / _FadeSpeed);
+                    return col*fade;
+                }
+
+                return fixed4(0,0,0,0);
             }
             ENDCG
         }
